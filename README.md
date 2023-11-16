@@ -33,6 +33,17 @@ This projects has to follow restrictions of approved tech stacks and satisfy bel
 - A registered user may view Bids made on a Listing
 - An unregistered user may search through Listings
 
+## Built with:
+
+- HTML
+- Tailwind (version >3.0.0)
+- JavaScript
+
+- Hosting services: GitHub Pages
+
+- Design applications: Figma
+
+- Planning applications: GitHub Projects
 
 ## Getting Started
 
