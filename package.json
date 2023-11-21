@@ -1,0 +1,36 @@
+{
+  "name": "semester-project2-babybids",
+  "version": "0.0.1",
+  "description": "An auction website for baby and maternity products",
+  "scripts": {
+    "test": "echo \"We will learn more about testing in the Workflow course\" && exit 1",
+    "build": "sass src/scss:dist/css",
+    "watch": "sass --watch src/scss:dist/css & live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thikimyen-nguyen/semester-project2-babybids"
+  },
+  "keywords": [
+    "auction",
+    "baby",
+    "maternity",
+    "bootstrap",
+    "SCSS",
+    "SASS"
+  ],
+  "author": "Yen Nguyen <nguyenthikimyen25@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thikimyen-nguyen/semester-project2-babybids/issues"
+  },
+  "homepage": "https://github.com/thikimyen-nguyen/semester-project2-babybids",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "bootstrap-icons": "^1.10.5"
+  },
+  "devDependencies": {
+    "sass": "^1.66.1"
+  }
+}

@@ -1,0 +1,49 @@
+
+@import "variables"; 
+@import "feed";
+@import "profile";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
+
+
+
+body {
+    font-family: $bodyFont;
+    max-width: 1400px;
+    color: $dark;
+}
+
+i {
+    color: $primary;
+}
+a {
+    text-decoration: none;
+}
+// header {
+//   position: sticky;
+//   z-index: 100;
+//   background-color: white;
+//   top: 0;
+// }
+.custom-background {
+    background-color: $primary;
+}
+.home-cover {
+  background-position-x: right;
+  background-position-y: top;    
+  position: relative;
+  img {
+    width: 100%;
+  }
+}
+.carousel {
+  position: absolute;
+  width: 50%;
+  top: 10%;
+  left: 25%
+}
