@@ -59,3 +59,6 @@ Before you start, ensure you have the following installed:
 
    ```bash
    git clone https://github.com/thikimyen-nguyen/semester-project2-babybids
+
+#### Image Resource
+<a href="https://www.freepik.com/free-photo/white-children-room-with-copy-space_14061170.htm#page=4&query=baby%20room&position=20&from_view=search&track=ais&uuid=5d529cc9-707a-45c3-9d2f-f6388dd31bdd">Image by wuttichai1983</a> on Freepik
