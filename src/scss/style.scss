@@ -24,15 +24,7 @@ i {
 a {
     text-decoration: none;
 }
-// header {
-//   position: sticky;
-//   z-index: 100;
-//   background-color: white;
-//   top: 0;
-// }
-.custom-background {
-    background-color: $primary;
-}
+
 .home-cover {
   background-position-x: right;
   background-position-y: top;    
@@ -42,8 +34,6 @@ a {
   }
 }
 .carousel {
-  position: absolute;
-  width: 50%;
-  top: 10%;
-  left: 25%
+  top: 5%;
+  left: 25%;
 }

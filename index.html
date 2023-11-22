@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Montserrat&family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="dist/css/style.css">
-    <script src="js/index.js" type="module" defer></script>
+    <script src="js/index.mjs" type="module" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -18,19 +18,21 @@
 </head>
 <body class="container">
     <header class="mb-4 sticky-top bg-white">
+      <!-- Navbar -->
       <div class="container-fluid">
         <div class="d-flex flex-wrap align-items-center justify-content-between">
           <a href="./" >
             <img src="asset/babybids logo5.png" alt="babybids logo" style="width: 10rem">
           </a>
+          <p class="d-none d-lg-block text-danger fs-5 m-0">Your Auction Journey for Baby and Maternity products!</p>
           <button class="btn btn-secondary text-light">Log In</button>
           <button class="btn btn-outline-secondary text-light d-none">Log Out</button>
-
         </div> 
       </div>
-      <div class="container mb-5">
+      <!-- Search -->
+      <div class="container mb-3">
           <div class="row">
-              <div class="col-12 col-sm-8 col-lg-5 m-auto mb-3">
+              <div class="col-12 col-sm-10 col-lg-7 m-auto mb-3">
                   <form class="d-flex flex-row search-form">
                       <label for="search"></label>
                       <input type="text" id="search" name="search" placeholder="Find products..." class="form-control">
@@ -39,8 +41,10 @@
               </div>
           </div>
       </div>
+   
       <div class="container d-none">
         <div class="row">
+          <!-- User profile display when log in successfully -->
           <div class="d-flex flex-row align-items-center mb-5 justify-content-between">
             <a href="./profile/index.html" class="text-secondary  align-items-center">
               <div class="d-flex flex-row flex-wrap align-items-center ">
@@ -53,13 +57,11 @@
               </div>
               <div class="ms-5">
                 <p class="text-dark">Total Credit: <span class="text-secondary">1000</span></p>
-                <!-- <button class="add-post-button btn btn-outline-secondary">+ New Listing</button> -->
               </div>
             </a>
             <button class="add-post-button btn btn-primary">+ New Listing</button>
-
           </div>
-          
+          <!-- Create listing form -->
           <div>
             <div class="bg-white p-2 mb-3 d-none">
               <form class="create-post-form needs-validation col-xl-6 justify-content-center m-auto">
@@ -92,16 +94,22 @@
           </div>
         </div>    
       </div>
+      <!-- <hr class="text-danger"> -->
     </header>
-    <main>
+    
+    <main class="mt-5">
         <div class="container">
             <div class="row">
-              <div class="loader text-center fs-3">Loading...</div>
-              <h1 class="text-center text-secondary">Last Chance</h1>
+              <!-- Last chance listings display -->
+              <div class="mb-3">
+                <div class="loader text-center fs-3 text-secondary d-none">Loading...</div>
+                <h1 class="text-center text-secondary border-bottom border-danger text-uppercase">last chance</h1>
+              </div>
               <div class="home-cover">
-                <img src="asset/top-view-baby-shoes-with-bath-accessories.jpg" alt="babybids cover image">
-                <div id="myCarousel" class="carousel slide " data-ride="carousel">
-                 
+                <!-- <a href="https://www.freepik.com/free-photo/white-children-room-with-copy-space_14061170.htm#page=4&query=baby%20room&position=20&from_view=search&track=ais&uuid=5d529cc9-707a-45c3-9d2f-f6388dd31bdd">Image by wuttichai1983</a> on Freepik -->
+                <img src="asset/white-children-room-with-copy-space.jpg" alt="babybids cover image"> 
+                <div id="myCarousel" class="carousel slide position-absolute w-50" data-ride="carousel">
+                  
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <img src="asset/babybid logo1.png" class="d-block w-100" alt="Slide 1">
@@ -123,24 +131,25 @@
                   </a>
                 </div>
               </div>
-                <!-- last chance listings area-->
-              
+              <!-- Intro area-->
+              <div class="text-center mb-5">
+                <img class="position-relative col-4 col-md-3" src="asset/babybid logo2.png" alt="babybids logo">
+                <p class="text-secondary text-start m-auto lh-lg col-md-8 col-lg-6 col-xl-5">Welcome to BabyBids, your premier destination for the sweetest moments in early motherhood. At BabyBids, we believe in Exploring the parenthood journey through exciting bids on baby and maternity essentials.</p>
+              </div>
                 
               
-              <!-- listing area -->
-              <div class="custom-background p-2 mt-3">
-                  
-                  
+              <!-- All listings area -->
+              <div class="p-2 mt-3">
+                <h2 class="text-center text-secondary border-bottom border-danger text-uppercase">our listings</h2>
                 
-                  <!-- list of posts-->
-                  <div class="posts"></div>
               </div>
             </div>
         </div>
        
     </main>
-   <footer class="mt-5 bg-secondary text-light">
-        <div class="p-5 text-center">&copy; Designed and Coded by Yen Nguyen. All rights reserved.</div>
+   <footer class="mt-5 bg-secondary text-light text-center">
+      <img src="asset/babybid logo1.png" alt="babybids logo" style="width: 10rem">
+      <div class="pb-5 fs-6">&copy; Designed and Coded by Yen Nguyen. All rights reserved.</div>
    </footer>
     
 </body>
