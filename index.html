@@ -42,21 +42,22 @@
           </div>
       </div>
    
-      <div class="container d-none">
+      <div class="container">
         <div class="row">
           <!-- User profile display when log in successfully -->
           <div class="d-flex flex-row align-items-center mb-5 justify-content-between">
-            <a href="./profile/index.html" class="text-secondary  align-items-center">
+            <a href="./profile/index.html" class="text-secondary text-decoration-none align-items-center">
               <div class="d-flex flex-row flex-wrap align-items-center ">
-                <div class="custom-avatar-shape" style="width: 3rem">
+                <div class="custom-avatar-shape" style="width: 4rem">
                   <div class="custom-avatar">
-                    <img src="asset/babybid logo2.png" alt="user avartar">
+                    <img src="asset/babeebids-logo1.png" alt="user avartar">
                   </div>
                 </div>
-                <h1 class="user-name ms-2">ntky</h1>
+                <p class="user-name m-0 fs-3 ms-3">ntky</p>
               </div>
               <div class="ms-5">
-                <p class="text-dark">Total Credit: <span class="text-secondary">1000</span></p>
+                <p class="text-dark m-0">Total Credits: <span class="text-secondary">1000</span></p>
+                <button class="btn btn-link text-secondary p-0">Change Avatar</button>
               </div>
             </a>
             <button class="add-post-button btn btn-primary">+ New Listing</button>
@@ -103,13 +104,13 @@
               <!-- Last chance listings display -->
               <div class="mb-3">
                 <div class="loader text-center fs-3 text-secondary d-none">Loading...</div>
-                <h1 class="text-center text-secondary border-bottom border-danger text-uppercase">last chance</h1>
+                <!-- <h1 class="text-center text-secondary border-bottom border-danger text-uppercase">last chance</h1> -->
               </div>
-              <div class="home-cover">
+              <div class="home-cover position-relative">
                 <!-- <a href="https://www.freepik.com/free-photo/white-children-room-with-copy-space_14061170.htm#page=4&query=baby%20room&position=20&from_view=search&track=ais&uuid=5d529cc9-707a-45c3-9d2f-f6388dd31bdd">Image by wuttichai1983</a> on Freepik -->
-                <img src="asset/white-children-room-with-copy-space.jpg" alt="babybids cover image"> 
-                <div id="myCarousel" class="carousel slide position-absolute w-50" data-ride="carousel">
-                  
+                <img class="w-100" src="asset/white-children-room-with-copy-space.jpg" alt="babybids cover image"> 
+                <div id="myCarousel" class="carousel slide position-absolute top-50 start-50 translate-middle" data-ride="carousel">
+                  <p class="text-center text-secondary border-bottom border-danger text-uppercase fs-3 fw-bolder">last chance</p>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <img src="asset/baby-s-sock-pair-woolen-shoes-pacifier-cap-milk-bottle-toy-orange-background.jpg" class="d-block w-100" alt="Slide 1">
@@ -140,8 +141,58 @@
               
               <!-- All listings area -->
               <div class="p-2 mt-5">
-                <h2 class="text-center text-secondary border-bottom border-danger text-uppercase">our listings</h2>
-
+                <h1 class="text-center text-secondary border-bottom border-danger text-uppercase">our listings</h1>
+                <!-- Lists of listing cards -->
+                <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4 g-4 mt-3">
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="asset/baby-s-sock-pair-woolen-shoes-pacifier-cap-milk-bottle-toy-orange-background.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title text-secondary">Title</h5>
+                        <p class="card-text">This is a Description</p>
+                      </div>
+                      <div class="card-footer">
+                        <small>Ends in: <span class="text-secondary">10 days</span></small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="asset/baby-s-sock-pair-woolen-shoes-pacifier-cap-milk-bottle-toy-orange-background.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title text-secondary">Title</h5>
+                        <p class="card-text">This is a Description</p>
+                      </div>
+                      <div class="card-footer">
+                        <small>Ends in: <span class="text-secondary">10 days</span></small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="asset/baby-s-sock-pair-woolen-shoes-pacifier-cap-milk-bottle-toy-orange-background.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title text-secondary">Title</h5>
+                        <p class="card-text">This is a Description</p>
+                      </div>
+                      <div class="card-footer">
+                        <small>Ends in: <span class="text-secondary">10 days</span></small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="asset/baby-s-sock-pair-woolen-shoes-pacifier-cap-milk-bottle-toy-orange-background.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title text-secondary">Title</h5>
+                        <p class="card-text">This is a Description</p>
+                      </div>
+                      <div class="card-footer">
+                        <small>Ends in: <span class="text-secondary">10 days</span></small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
         </div>

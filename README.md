@@ -1,4 +1,4 @@
-# babybids - An auction website for baby and maternity products
+# babee.bids - An auction website for baby and maternity products
 
 This is a Semester Project 2 in my second year to take the skills learned over the past three semesters and create an auction website.
 
@@ -17,7 +17,7 @@ This is a Semester Project 2 in my second year to take the skills learned over t
 
 ## Description
 
-babybids is an auction website where users can view, search, sell and bid for baby and maternity products. When a new user joins the website, they are given 1000 credits to use on the site. They can get credits by selling items and use credit by buying items. Non-registered users can search through the listings, but only registered users can make bids on listings.
+babee.bids is an auction website where users can view, search, sell and bid for baby and maternity products. When a new user joins the website, they are given 1000 credits to use on the site. They can get credits by selling items and use credit by buying items. Non-registered users can search through the listings, but only registered users can make bids on listings.
 
 
 ## Features

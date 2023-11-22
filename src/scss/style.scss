@@ -18,22 +18,12 @@ body {
     color: $dark;
 }
 
-i {
-    color: $primary;
-}
-a {
-    text-decoration: none;
-}
-
-.home-cover {
-  background-position-x: right;
-  background-position-y: top;    
-  position: relative;
-  img {
-    width: 100%;
+.card {
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
   }
 }
-.carousel {
-  top: 5%;
-  left: 25%;
-}
+
+
