@@ -15,7 +15,8 @@ body {
   color: $dark;
 }
 
-.card {
+.card,
+i {
   transition: transform 0.3s;
   &:hover {
     transform: scale(1.05);
@@ -24,4 +25,8 @@ body {
 }
 .home-cover {
   opacity: 0.5;
+}
+.btn-link:hover {
+  background-color: $light;
+  text-decoration: none;
 }
