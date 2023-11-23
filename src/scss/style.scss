@@ -1,5 +1,4 @@
-
-@import "variables"; 
+@import "variables";
 @import "feed";
 @import "profile";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
@@ -10,12 +9,10 @@
 @import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 @import "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 
-
-
 body {
-    font-family: $bodyFont;
-    max-width: 1400px;
-    color: $dark;
+  font-family: $bodyFont;
+  max-width: 1400px;
+  color: $dark;
 }
 
 .card {
@@ -25,5 +22,3 @@ body {
     cursor: pointer;
   }
 }
-
-

@@ -1,211 +1,388 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="auction for baby and maternity products">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Montserrat&family=Quicksand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="dist/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="auction for baby and maternity products"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Montserrat&family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="dist/css/style.css" />
     <script src="js/index.mjs" type="module" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <title>babybids | Homepage </title>
-</head>
-<body class="container">
+    <title>babybids | Homepage</title>
+  </head>
+  <body class="container">
     <header class="mb-4 sticky-top bg-white">
       <!-- Navbar -->
       <div class="container-fluid">
-        <div class="d-flex flex-wrap align-items-center justify-content-between">
-          <a href="./" >
-            <img src="asset/babeebids-logo1.png" alt="babybids logo" style="width: 10rem">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-between"
+        >
+          <a href="./">
+            <img
+              src="asset/babeebids-logo1.png"
+              alt="babybids logo"
+              style="width: 10rem"
+            />
           </a>
-          <p class="d-none d-lg-block text-secondary fs-5 m-0">Your Auction Journey for Baby and Maternity products!</p>
+          <p class="d-none d-lg-block text-secondary fs-5 m-0">
+            Your Auction Journey for Baby and Maternity products!
+          </p>
           <button class="btn btn-primary d-none">Log In</button>
           <button class="btn btn-primary">Log Out</button>
-        </div> 
+        </div>
       </div>
       <!-- Search -->
       <div class="container mb-3">
-          <div class="row">
-              <div class="col-12 col-sm-10 col-lg-7 m-auto mb-3">
-                  <form class="d-flex flex-row search-form">
-                      <label for="search"></label>
-                      <input type="text" id="search" name="search" placeholder="Find products..." class="form-control">
-                      <button type="submit" class="btn btn-secondary ms-1" id="search-button">Search</button>
-                  </form>
-              </div>
+        <div class="row">
+          <div class="col-12 col-sm-10 col-lg-7 m-auto mb-3">
+            <form class="d-flex flex-row search-form">
+              <label for="search"></label>
+              <input
+                type="text"
+                id="search"
+                name="search"
+                placeholder="Find products..."
+                class="form-control"
+              />
+              <button
+                type="submit"
+                class="btn btn-secondary ms-1"
+                id="search-button"
+              >
+                Search
+              </button>
+            </form>
           </div>
+        </div>
       </div>
-   
+
       <div class="container">
         <div class="row">
           <!-- User profile display when log in successfully -->
-          <div class="d-flex flex-row align-items-center mb-5 justify-content-center">
-            <a href="./profile/index.html" class="text-secondary text-decoration-none align-items-center">
-              <div class="d-flex flex-row flex-wrap align-items-cente justify-content-center mb-3">
+          <div
+            class="d-flex flex-row align-items-center mb-5 justify-content-center"
+          >
+            <a
+              href="./profile/index.html"
+              class="text-secondary text-decoration-none align-items-center"
+            >
+              <div
+                class="d-flex flex-row flex-wrap align-items-cente justify-content-center mb-3"
+              >
                 <div class="custom-avatar-shape" style="width: 4rem">
                   <div class="custom-avatar">
-                    <img src="asset/babeebids-logo1.png" alt="user avartar">
+                    <img src="asset/babeebids-logo1.png" alt="user avartar" />
                   </div>
                 </div>
                 <div class="ms-3">
                   <p class="user-name m-0 fs-3">ntky</p>
-                  <p class="text-dark m-0">Credits: <span class="text-secondary">1000</span></p>
+                  <p class="text-dark m-0">
+                    Credits: <span class="text-secondary">1000</span>
+                  </p>
                 </div>
-               
               </div>
               <div class="ms-5">
-                <button class="btn btn-outline-secondary  update-avatar pt-1 pb-1 ps-2 pe-2">Change Avatar</button>
-                <button class="add-post-button btn btn-primary pt-1 pb-1 ps-2 pe-2">+ New Listing</button>
+                <button
+                  class="btn btn-outline-secondary update-avatar pt-1 pb-1 ps-2 pe-2"
+                >
+                  Change Avatar
+                </button>
+                <button
+                  class="add-post-button btn btn-primary pt-1 pb-1 ps-2 pe-2"
+                >
+                  + New Listing
+                </button>
               </div>
             </a>
-            
           </div>
           <!-- Create listing form -->
           <div>
             <div class="bg-white p-2 mb-3 d-none">
-              <form class="create-post-form needs-validation col-xl-6 justify-content-center m-auto">
-                  <div class="mb-4">
-                      <label for="title" class="form-label fs-4">Title</label>
-                      <input type="text" class="form-control" name="title" minlength="4" placeholder="Minimum 04 charaters" aria-required="true" required>
-                  </div>
-                  <div class="mb-4">
-                      <label for="body" class="form-label fs-4">Description</label>
-                      <input type="text" class="form-control" name="body" minlength="10" placeholder="Minimum 10 characters" aria-required="true" required>
-                  </div>
-                  <div class="mb-4">
-                    <label for="date" class="form-label fs-4">End Date</label>
-                    <input type="date" class="form-control" name="date" aria-required="true" required>
+              <form
+                class="create-post-form needs-validation col-xl-6 justify-content-center m-auto"
+              >
+                <div class="mb-4">
+                  <label for="title" class="form-label fs-4">Title</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="title"
+                    minlength="4"
+                    placeholder="Minimum 04 charaters"
+                    aria-required="true"
+                    required
+                  />
                 </div>
-                  <div class="mb-4">
-                      <label for="media" class="form-label fs-4">Media</label>
-                      <input type="url" class="form-control" name="media" placeholder="Url to your image" aria-required="true" required>
-                  </div>
-                  <div class="mb-4">
-                      <label for="tags" class="form-label fs-4">Tags</label>
-                      <input type="text" class="form-control" name="tags" placeholder="Separate tags by commas " aria-required="true">
-                  </div>
-                  <div class="text-center mb-5 w-100">
-                      <button class="btn btn-outline-secondary" id="cancel-form-button">Cancel</button>
-                      <button type="submit" class="btn btn-primary" id="create-post-button">Create Listing</button>
-                  </div>
+                <div class="mb-4">
+                  <label for="body" class="form-label fs-4">Description</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="body"
+                    minlength="10"
+                    placeholder="Minimum 10 characters"
+                    aria-required="true"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label for="date" class="form-label fs-4">End Date</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    name="date"
+                    aria-required="true"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label for="media" class="form-label fs-4">Media</label>
+                  <input
+                    type="url"
+                    class="form-control"
+                    name="media"
+                    placeholder="Url to your image"
+                    aria-required="true"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label for="tags" class="form-label fs-4">Tags</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="tags"
+                    placeholder="Separate tags by commas "
+                    aria-required="true"
+                  />
+                </div>
+                <div class="text-center mb-5 w-100">
+                  <button
+                    class="btn btn-outline-secondary"
+                    id="cancel-form-button"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    id="create-post-button"
+                  >
+                    Create Listing
+                  </button>
+                </div>
               </form>
             </div>
           </div>
-        </div>    
+        </div>
       </div>
       <!-- <hr class="text-danger"> -->
     </header>
-    
+
     <main class="mt-5">
-        <div class="container">
-            <div class="row">
-              <!-- Last chance listings display -->
-              <div class="mb-3">
-                <div class="loader text-center fs-3 text-secondary d-none">Loading...</div>
-                <!-- <h1 class="text-center text-secondary border-bottom border-danger text-uppercase">last chance</h1> -->
-              </div>
-              <div class="home-cover position-relative">
-                <!-- <a href="https://www.freepik.com/free-photo/white-children-room-with-copy-space_14061170.htm#page=4&query=baby%20room&position=20&from_view=search&track=ais&uuid=5d529cc9-707a-45c3-9d2f-f6388dd31bdd">Image by wuttichai1983</a> on Freepik -->
-                <img class="w-100" src="asset/white-children-room-with-copy-space.jpg" alt="babybids cover image"> 
-                <div id="myCarousel" class="carousel slide position-absolute top-50 start-50 translate-middle" data-ride="carousel">
-                  <p class="text-center text-secondary border-bottom border-danger text-uppercase fs-3 fw-bolder">last chance</p>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="asset/baby-s-sock-pair-woolen-shoes-pacifier-cap-milk-bottle-toy-orange-background.jpg" class="d-block w-100" alt="Slide 1">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="asset/top-view-floral-paper-ornament-with-copy-space.jpg" class="d-block w-100" alt="Slide 2">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="asset/white-children-room-with-copy-space.jpg" class="d-block w-100" alt="Slide 3">
-                    </div>
-                  </div>
-                  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only "></span>
-                  </a>
-                  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only"></span>
-                  </a>
+      <div class="container">
+        <div class="row">
+          <!-- Last chance listings display -->
+          <div class="mb-3">
+            <div class="loader text-center fs-3 text-secondary d-none">
+              Loading...
+            </div>
+            <!-- <h1 class="text-center text-secondary border-bottom border-danger text-uppercase">last chance</h1> -->
+          </div>
+          <div class="home-cover position-relative">
+            <img
+              class="w-100"
+              src="asset/pink-girlish-composition-newborn.jpg"
+              alt="babybids cover image"
+            />
+            <div
+              id="myCarousel"
+              class="carousel slide position-absolute top-50 start-50 translate-middle"
+              data-ride="carousel"
+            >
+              <p
+                class="text-center text-secondary border-bottom border-danger text-uppercase fs-3 fw-bolder"
+              >
+                last chance
+              </p>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="asset/baby-s-sock-pair-woolen-shoes-pacifier-cap-milk-bottle-toy-orange-background.jpg"
+                    class="d-block w-100"
+                    alt="Slide 1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="asset/top-view-floral-paper-ornament-with-copy-space.jpg"
+                    class="d-block w-100"
+                    alt="Slide 2"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="asset/white-children-room-with-copy-space.jpg"
+                    class="d-block w-100"
+                    alt="Slide 3"
+                  />
                 </div>
               </div>
-              <!-- Intro area-->
-              <div class="text-center mb-5">
-                <img class="position-relative col-4 col-md-3" src="asset/babeebids-logo1-2.png" alt="babybids logo">
-                <p class="text-secondary fs-5 text-start m-auto lh-lg col-md-9 col-lg-8 col-xl-7 pb-5">Welcome to babee.bids, your premier destination for the sweetest moments in early motherhood. At babee.bids, we believe in Exploring the parenthood journey through exciting bids on baby and maternity essentials.</p>
+              <a
+                class="carousel-control-prev"
+                href="#myCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only"></span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#myCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only"></span>
+              </a>
+            </div>
+          </div>
+          <!-- Intro area-->
+          <div class="text-center mb-5">
+            <img
+              class="position-relative col-4 col-md-3"
+              src="asset/babeebids-logo1-2.png"
+              alt="babybids logo"
+            />
+            <p
+              class="text-secondary fs-5 text-start m-auto lh-lg col-md-9 col-lg-8 col-xl-7 pb-5"
+            >
+              Welcome to babee.bids, your premier destination for the sweetest
+              moments in early motherhood. At babee.bids, we believe in
+              Exploring the parenthood journey through exciting bids on baby and
+              maternity essentials.
+            </p>
+          </div>
+
+          <!-- All listings area -->
+          <div class="p-2 mt-5">
+            <h1
+              class="text-center text-secondary border-bottom border-danger text-uppercase"
+            >
+              our listings
+            </h1>
+            <!-- Lists of listing cards -->
+            <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4 g-4 mt-3">
+              <div class="col">
+                <div class="card h-100">
+                  <img
+                    src="asset/baby-s-sock-pair-woolen-shoes-pacifier-cap-milk-bottle-toy-orange-background.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-secondary">Title</h5>
+                    <p class="card-text">This is a Description</p>
+                  </div>
+                  <div class="card-footer">
+                    <small
+                      >Ends in:
+                      <span class="text-secondary">10 days</span></small
+                    >
+                  </div>
+                </div>
               </div>
-                
-              
-              <!-- All listings area -->
-              <div class="p-2 mt-5">
-                <h1 class="text-center text-secondary border-bottom border-danger text-uppercase">our listings</h1>
-                <!-- Lists of listing cards -->
-                <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4 g-4 mt-3">
-                  <div class="col">
-                    <div class="card h-100">
-                      <img src="asset/baby-s-sock-pair-woolen-shoes-pacifier-cap-milk-bottle-toy-orange-background.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title text-secondary">Title</h5>
-                        <p class="card-text">This is a Description</p>
-                      </div>
-                      <div class="card-footer">
-                        <small>Ends in: <span class="text-secondary">10 days</span></small>
-                      </div>
-                    </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img
+                    src="asset/baby-s-sock-pair-woolen-shoes-pacifier-cap-milk-bottle-toy-orange-background.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-secondary">Title</h5>
+                    <p class="card-text">This is a Description</p>
                   </div>
-                  <div class="col">
-                    <div class="card h-100">
-                      <img src="asset/baby-s-sock-pair-woolen-shoes-pacifier-cap-milk-bottle-toy-orange-background.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title text-secondary">Title</h5>
-                        <p class="card-text">This is a Description</p>
-                      </div>
-                      <div class="card-footer">
-                        <small>Ends in: <span class="text-secondary">10 days</span></small>
-                      </div>
-                    </div>
+                  <div class="card-footer">
+                    <small
+                      >Ends in:
+                      <span class="text-secondary">10 days</span></small
+                    >
                   </div>
-                  <div class="col">
-                    <div class="card h-100">
-                      <img src="asset/baby-s-sock-pair-woolen-shoes-pacifier-cap-milk-bottle-toy-orange-background.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title text-secondary">Title</h5>
-                        <p class="card-text">This is a Description</p>
-                      </div>
-                      <div class="card-footer">
-                        <small>Ends in: <span class="text-secondary">10 days</span></small>
-                      </div>
-                    </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img
+                    src="asset/baby-s-sock-pair-woolen-shoes-pacifier-cap-milk-bottle-toy-orange-background.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-secondary">Title</h5>
+                    <p class="card-text">This is a Description</p>
                   </div>
-                  <div class="col">
-                    <div class="card h-100">
-                      <img src="asset/baby-s-sock-pair-woolen-shoes-pacifier-cap-milk-bottle-toy-orange-background.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title text-secondary">Title</h5>
-                        <p class="card-text">This is a Description</p>
-                      </div>
-                      <div class="card-footer">
-                        <small>Ends in: <span class="text-secondary">10 days</span></small>
-                      </div>
-                    </div>
+                  <div class="card-footer">
+                    <small
+                      >Ends in:
+                      <span class="text-secondary">10 days</span></small
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img
+                    src="asset/baby-s-sock-pair-woolen-shoes-pacifier-cap-milk-bottle-toy-orange-background.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-secondary">Title</h5>
+                    <p class="card-text">This is a Description</p>
+                  </div>
+                  <div class="card-footer">
+                    <small
+                      >Ends in:
+                      <span class="text-secondary">10 days</span></small
+                    >
                   </div>
                 </div>
               </div>
             </div>
+          </div>
         </div>
-       
+      </div>
     </main>
-   <footer class="mt-5 bg-primary text-dark text-center">
-      <img src="asset/babeebids-logo2.png" alt="babybids logo" style="width: 10rem">
-      <div class="pb-5 fs-6">&copy;  All rights reserved.</div>
-   </footer>
-    
-</body>
+    <footer class="mt-5 bg-primary text-dark text-center">
+      <img
+        src="asset/babeebids-logo2.png"
+        alt="babybids logo"
+        style="width: 10rem"
+      />
+      <div class="pb-5 fs-6">&copy; All rights reserved.</div>
+    </footer>
+  </body>
 </html>

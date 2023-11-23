@@ -3,9 +3,12 @@
   "version": "0.0.1",
   "description": "An auction website for baby and maternity products",
   "scripts": {
-    "test": "echo \"We will learn more about testing in the Workflow course\" && exit 1",
     "build": "sass src/scss:dist/css",
-    "watch": "sass --watch src/scss:dist/css & live-server"
+    "watch": "sass --watch src/scss:dist/css & live-server",
+    "format": "prettier -w js/**/*.mjs",
+    "lint": "eslint js/**/*.mjs",
+    "lint-fix": "eslint js/**/*.mjs --cache --fix",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -31,6 +34,25 @@
     "bootstrap-icons": "^1.10.5"
   },
   "devDependencies": {
+    "eslint": "^8.54.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
+    "prettier": "^3.1.0",
     "sass": "^1.66.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ],
+    "*.css": [
+      "prettier --write"
+    ]
   }
 }
