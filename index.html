@@ -23,6 +23,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></script>
+
     <title>babybids | Homepage</title>
   </head>
   <body class="container">
@@ -30,7 +31,7 @@
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg bg-white">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"
+          <a class="navbar-brand me-auto" href="#"
             ><img
               src="asset/babeebids-logo1.png"
               alt="babybids logo"
@@ -47,19 +48,19 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <!-- <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li> -->
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarTogglerDemo02"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0 fw-bolder text-uppercase">
               <li class="nav-item">
-                <a class="nav-link" href="#">Listings</a>
+                <a class="nav-link" href="#listings-container">Listings</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Log In</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
+            <form class="d-flex ms-5" role="search">
               <label for="search"></label>
               <input
                 class="form-control me-2"
@@ -82,10 +83,10 @@
       </nav>
 
       <div class="container">
-        <div class="row mt-2">
+        <div class="row">
           <!-- User profile display when log in successfully -->
           <div
-            class="d-flex flex-row align-items-center mb-5 justify-content-center col-12"
+            class="d-flex flex-row align-items-center mb-1 justify-content-center col-12"
           >
             <a
               href="./profile/index.html"
@@ -207,96 +208,81 @@
     <main class="">
       <div class="container">
         <div class="row">
-          <!-- Last chance listings display -->
-
-          <div class="loader text-center fs-3 text-secondary">Loading...</div>
-          <!-- <div class="d-flex justify-content-end">
-            <button class="btn btn-link text-secondary ">>>All Listings</button>
-          </div> -->
           <div class="position-relative">
             <img
-              class="w-100 home-cover"
+              class="w-100 home-cover opacity-75"
               src="asset/pink-girlish-composition-newborn.jpg"
               alt="babybids cover image"
             />
+            <!-- Last chance listings display -->
             <div
-              id="myCarousel"
-              class="carousel slide position-absolute top-50 start-50 translate-middle"
-              data-ride="carousel"
+              id="carouselExampleAutoplaying"
+              class="carousel slide w-50 m-auto position-absolute top-50 start-50 translate-middle"
+              data-bs-ride="carousel"
             >
-              <p
-                class="text-center text-secondary border-bottom border-danger text-uppercase fs-4 fw-bolder"
-              >
-                last chance
-              </p>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <div class="card h-100">
+                  <div class="card h-100 position-relative">
                     <img
                       src="asset/baby-s-sock-pair-woolen-shoes-pacifier-cap-milk-bottle-toy-orange-background.jpg"
                       class="card-img-top"
-                      alt="listing image"
+                      alt="..."
                     />
-                    <div class="card-image-overlay">
-                      <p class="card-title text-secondary fs-5 text-center">
-                        Title
+                    <div
+                      class="card-body position-absolute bottom-0 bg-light opacity-75 w-100 p-1 align-items-center"
+                    >
+                      <h5 class="card-title text-secondary m-0 ps-1">Title</h5>
+                      <p class="card-text text-end pe-1 fs-6">
+                        Ends in: <span class="text-secondary">10 days</span>
                       </p>
-                    </div>
-                    <div class="card-footer">
-                      <small
-                        >Ends in:
-                        <span class="text-secondary">10 days</span></small
-                      >
                     </div>
                   </div>
                 </div>
-                <div class="carousel-item">
-                  <div class="card h-100">
+                <div class="carousel-item active">
+                  <div class="card h-100 position-relative">
                     <img
-                      src="asset/baby-s-sock-pair-woolen-shoes-pacifier-cap-milk-bottle-toy-orange-background.jpg"
+                      src="asset/top-view-floral-paper-ornament-with-copy-space.jpg"
                       class="card-img-top"
-                      alt="listing image"
+                      alt="..."
                     />
-                    <div class="card-image-overlay">
-                      <p class="card-title text-secondary fs-5 text-center">
-                        Title
+                    <div
+                      class="card-body position-absolute bottom-0 bg-light opacity-75 w-100 p-1 align-items-center"
+                    >
+                      <h5 class="card-title text-secondary m-0 ps-1">Title</h5>
+                      <p class="card-text text-end pe-1 fs-6">
+                        Ends in: <span class="text-secondary">10 days</span>
                       </p>
-                    </div>
-                    <div class="card-footer">
-                      <small
-                        >Ends in:
-                        <span class="text-secondary">10 days</span></small
-                      >
                     </div>
                   </div>
                 </div>
               </div>
-              <a
+              <button
                 class="carousel-control-prev"
-                href="#myCarousel"
-                role="button"
-                data-slide="prev"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev"
               >
                 <span
                   class="carousel-control-prev-icon"
                   aria-hidden="true"
                 ></span>
-                <span class="sr-only"></span>
-              </a>
-              <a
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
                 class="carousel-control-next"
-                href="#myCarousel"
-                role="button"
-                data-slide="next"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next"
               >
                 <span
                   class="carousel-control-next-icon"
                   aria-hidden="true"
                 ></span>
-                <span class="sr-only"></span>
-              </a>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           </div>
+
           <!-- Intro area-->
           <div class="text-center mb-5 pt-5">
             <img
@@ -305,7 +291,7 @@
               alt="babybids logo"
             />
             <p
-              class="text-secondary fs-5 text-start m-auto lh-lg col-md-9 col-lg-8 col-xl-7 pb-5"
+              class="text-secondary fs-5 text-start m-auto lh-lg col-md-9 col-lg-8 col-xl-7 pt-5"
             >
               Welcome to babee.bids, your premier destination for the sweetest
               moments in early motherhood. At babee.bids, we believe in
@@ -315,7 +301,7 @@
           </div>
 
           <!-- All listings area -->
-          <div class="p-2 mt-5">
+          <div class="p-2 mt-2" id="listings-container">
             <h1
               class="text-center text-secondary border-bottom border-danger text-uppercase"
             >

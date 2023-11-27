@@ -23,10 +23,11 @@ i {
     cursor: pointer;
   }
 }
-.home-cover {
-  opacity: 0.5;
-}
+
 .btn-link:hover {
   background-color: $light;
   text-decoration: none;
+}
+.navbar-collapse {
+  text-align: center;
 }

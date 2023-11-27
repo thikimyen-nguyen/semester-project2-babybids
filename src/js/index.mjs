@@ -1,7 +1,4 @@
 // Show search form
-import { searchIcon, showSearchForm } from "../js/components/search.mjs";
-
-searchIcon.addEventListener("click", showSearchForm);
 
 import { allListings } from "./auth_API/api.mjs";
 
