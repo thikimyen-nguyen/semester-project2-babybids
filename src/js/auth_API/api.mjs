@@ -1,5 +1,5 @@
-const baseUrl = "https://api.noroff.dev/api/v1";
+const baseApi = "https://api.noroff.dev/api/v1";
 const listingsEndpoint = "/auction/listings";
-const allListings = baseUrl + listingsEndpoint;
+const allListingsURL = baseApi + listingsEndpoint;
 
-export { allListings };
+export { allListingsURL };

@@ -15,8 +15,7 @@ body {
   color: $dark;
 }
 
-.card,
-i {
+.card {
   transition: transform 0.3s;
   &:hover {
     transform: scale(1.05);
