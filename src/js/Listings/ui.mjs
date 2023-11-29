@@ -125,22 +125,19 @@ function carouselListing(listings) {
     const cardMedia = document.createElement("img");
     cardMedia.classList.add("card-img-top", "img-fluid")
     cardMedia.style.objectFit = "cover"; 
-    cardMedia.style.height = "200px"; 
+    cardMedia.style.height = "300px"; 
     cardMedia.src = media[0];
     cardMedia.alt = title;
 
     //  listing body
     const cardBody = document.createElement("div");
-    cardBody.classList.add("card-body", "text-center");
+    cardBody.classList.add("card-body", "bg-light", "ps-2", "pe-2");
     const cardTitle = document.createElement("h5");
     
     cardTitle.classList.add("card-title", "text-secondary", "text-capitalize")
     cardTitle.innerText = title;
-    
-    
-    // listing footer
-    
-    const endDate = document.createElement("small");
+    const endDate = document.createElement("p");
+    endDate.classList.add("text-end")
     endDate.innerText = "Ends in: ";
     const endDateValue = document.createElement("span");
     endDateValue.classList.add("text-secondary");

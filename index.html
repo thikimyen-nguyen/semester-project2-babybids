@@ -86,7 +86,7 @@
         <div class="row">
           <!-- User profile display when log in successfully -->
           <div
-            class="d-flex flex-row align-items-center mb-1 justify-content-center col-12"
+            class="d-flex flex-row align-items-center mb-1 justify-content-center col-12 d-none"
           >
             <a
               href="./profile/index.html"
@@ -208,18 +208,23 @@
       <!-- <hr class="text-danger"> -->
     </header>
 
-    <main class="">
+    <main class="mt-1">
       <div class="container">
         <div class="row">
+          <!-- <div class="position-relative">
+            <img
+            class="home-cover img-fluid"
+            src="asset/baby_bedroom_interior_elements_vector_illustrations_set.jpg"
+            alt="babybids cover image"
+            />
+            <div class="position-absolute top-50 start-50 translate-middle w-100" style="background-color: rgba(242, 212, 194, 0.9);">
+              <p class="text-secondary fs-5 text-start m-auto p-3"> Auction for baby and martinity products </p>
+            </div>
+          </div> -->
           <div>
-            <!-- <img
-              class="w-100 home-cover opacity-75"
-              src="asset/pink-girlish-composition-newborn.jpg"
-              alt="babybids cover image"
-            /> -->
-            <h2 class="text-center text-capitalize text-secondary mt-3">last chance</h2>
+            <h2 class="text-center text-capitalize text-secondary mt-5 border-bottom border-danger">last chance</h2>
             <!-- Last chance listings display -->
-            <div id="carouselExampleAutoplaying" class="carousel slide col-lg-6 m-auto" data-bs-ride="carousel">
+            <div id="carouselExampleAutoplaying" class="carousel slide col-lg-8 m-auto" data-bs-ride="carousel">
               <div class="carousel-inner" id="carousel-listings">
                
               </div>
@@ -236,9 +241,9 @@
           </div>
 
           <!-- Intro area-->
-          <div class="text-center mb-5 pt-5">
+          <div class="text-center mb-5 pt-5 mt-2">
             <img
-              class="position-relative col-4 col-md-3"
+              class="col-6 col-md-3"
               src="asset/babeebids-logo1-2.png"
               alt="babybids logo"
             />
@@ -253,11 +258,11 @@
           </div>
 
           <!-- All listings area -->
-          <div class="p-2 mt-2" >
+          <div class="pt-5 mt-5" >
             <h1
               class="text-center text-secondary border-bottom border-danger text-uppercase"
             >
-              our listings
+              all listings
             </h1>
             <!-- Lists of listing cards -->
             <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4 g-4 mt-3" id="listings-container"></div>
