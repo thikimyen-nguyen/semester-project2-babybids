@@ -9,8 +9,9 @@ import { createTable } from "./table.mjs";
 // single listing detail HTML
 
 export function singleListingCard(listing) {
-  const { title, description, endsAt, _count, media, bids } = listing;
-  
+  const { title, description, endsAt, media, bids } = listing;
+  const pageTitle = document.querySelector("title");
+  pageTitle.innerText = title;
   
   const listingContainer = document.querySelector("#single-listing-container");
   const card = document.createElement("div");

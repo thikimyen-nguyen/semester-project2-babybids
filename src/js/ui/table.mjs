@@ -5,7 +5,7 @@
   table.classList.add("table", "table-striped");
 
   var thead = document.createElement("thead");
-  thead.classList.add("table-light");
+  thead.classList.add("table-primary");
 
   const headerRow = document.createElement("tr");
 

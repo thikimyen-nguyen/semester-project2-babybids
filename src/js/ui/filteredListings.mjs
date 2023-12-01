@@ -7,7 +7,7 @@ export function carouselListing(listings) {
   console.log(filteredListings);
   // Create HTML
   filteredListings.forEach((listing, index) => {
-    const { title, endsAt, _count, media, id } = listing;
+    const { title, endsAt, media, id } = listing;
     console.log(media);
     const carouselContainer = document.querySelector("#carousel-listings");
 
