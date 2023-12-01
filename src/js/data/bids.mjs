@@ -6,9 +6,10 @@ export function getMaxAmount(array) {
     return "_";
   }
 
-
-  let maxAmount = array.reduce((max, current) => Math.max(max, current.amount), array[0].amount);
+  let maxAmount = array.reduce(
+    (max, current) => Math.max(max, current.amount),
+    array[0].amount,
+  );
 
   return maxAmount;
 }
-

@@ -1,4 +1,3 @@
-
 //  get all listings
 async function getListings(url) {
   const response = await fetch(url);
@@ -10,4 +9,4 @@ async function getListings(url) {
   }
 }
 
-export { getListings}
+export { getListings };

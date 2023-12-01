@@ -8,5 +8,3 @@ export async function getOneListing(url) {
     throw new Error("Could not get listing detail!");
   }
 }
-
-

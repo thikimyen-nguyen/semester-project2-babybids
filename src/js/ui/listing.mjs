@@ -1,22 +1,25 @@
 import { updateCountdown } from "../data/countdown.mjs";
 import { getMaxAmount } from "../data/bids.mjs";
-import { setAttributes, bidAttributes, bidBtnAttributes } from "../data/setAttributes.mjs";
+import {
+  setAttributes,
+  bidAttributes,
+  bidBtnAttributes,
+} from "../data/setAttributes.mjs";
 // single listing detail HTML
 
 export function singleListingCard(listing) {
-  const {title, description, endsAt, _count, media, bids} = listing;
- 
+  const { title, description, endsAt, _count, media, bids } = listing;
+
   const listingContainer = document.querySelector("#single-listing-container");
   const card = document.createElement("div");
   card.classList.add("row", "g-0");
- 
 
   // card Image
   const imageContainer = document.createElement("div");
   imageContainer.classList.add("col-md-5");
   const cardImage = document.createElement("img");
   cardImage.classList.add("img-fluid", "rounded-start");
-  imageContainer.append(cardImage)
+  imageContainer.append(cardImage);
 
   cardImage.src = media[0];
   cardImage.alt = title;
@@ -25,10 +28,15 @@ export function singleListingCard(listing) {
   cardBodyContainer.classList.add("col-md-7");
   const cardBody = document.createElement("div");
   cardBody.classList.add("card-body");
-  
 
   const cardTitle = document.createElement("h1");
-  cardTitle.classList.add("card-title", "text-secondary", "text-capitalize", "fw-bolder", "mb-4");
+  cardTitle.classList.add(
+    "card-title",
+    "text-secondary",
+    "text-capitalize",
+    "fw-bolder",
+    "mb-4",
+  );
   cardTitle.innerText = title;
 
   // listing ending date
@@ -69,17 +77,23 @@ export function singleListingCard(listing) {
 
   const bidBtn = document.createElement("button");
   bidBtn.classList.add("btn", "btn-primary", "ms-1");
-  bidBtn.innerText = "Bid"
+  bidBtn.innerText = "Bid";
   setAttributes(bidBtn, bidBtnAttributes);
   // note to log in
   const bidNote = document.createElement("p");
   bidNote.classList.add("text-secondary", "text-center", "mt-2");
   const noteLoginBtn = document.createElement("button");
-  noteLoginBtn.classList.add("btn", "btn-link", "text-secondary", "ps-2", "pe-2");
+  noteLoginBtn.classList.add(
+    "btn",
+    "btn-link",
+    "text-secondary",
+    "ps-2",
+    "pe-2",
+  );
   noteLoginBtn.innerText = "Log In";
 
   bidNote.append("Please", noteLoginBtn, "to Bid");
-  bidFormContainer.append(bidLabel, bidInput, bidBtn)
+  bidFormContainer.append(bidLabel, bidInput, bidBtn);
 
   console.log(bids);
 
@@ -106,24 +120,29 @@ export function singleListingCard(listing) {
   const tableHeader = document.createElement("thead");
   tableHeader.classList.add("table-light");
   const tableHeaderRow = document.createElement("tr");
-  const headers = ['#', 'Username', 'Bid at (NOK)', 'Date'];
+  const headers = ["#", "Username", "Bid at (NOK)", "Date"];
 
   // Append headers to header row
   headers.forEach(function (headerText) {
-    const th = document.createElement('th');
-    th.scope = 'col';
+    const th = document.createElement("th");
+    th.scope = "col";
     th.textContent = headerText;
     tableHeaderRow.appendChild(th);
   });
 
-  tableHeaderRow.append(headers)
-  historyTable.append(tableHeader)
+  tableHeaderRow.append(headers);
+  historyTable.append(tableHeader);
   historyContainer.append(historyTitle, historyTable);
 
   //  all append
-  cardBody.append(cardTitle, endDateContainer, highestBidContainer, bidFormContainer, bidNote);
+  cardBody.append(
+    cardTitle,
+    endDateContainer,
+    highestBidContainer,
+    bidFormContainer,
+    bidNote,
+  );
   cardBodyContainer.append(cardBody);
   card.append(imageContainer, cardBodyContainer);
-  listingContainer.append(card, descriptionContainer, historyContainer)
-
+  listingContainer.append(card, descriptionContainer, historyContainer);
 }

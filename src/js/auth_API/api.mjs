@@ -10,5 +10,13 @@ const querryString = document.location.search;
 const param = new URLSearchParams(querryString);
 const id = param.get("id");
 // url to fetch
-const singleListingURL = baseApi + singleListingEndpoint + "/" +id + "?" + bidsPara + "&" + sellerPara;
+const singleListingURL =
+  baseApi +
+  singleListingEndpoint +
+  "/" +
+  id +
+  "?" +
+  bidsPara +
+  "&" +
+  sellerPara;
 export { allListingsURL, singleListingURL };
