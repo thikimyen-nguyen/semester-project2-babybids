@@ -97,7 +97,6 @@ export function singleListingCard(listing) {
   bidNote.append("Please", noteLoginBtn, "to Bid");
   bidFormContainer.append(bidLabel, bidInput, bidBtn);
 
-  console.log(bids);
 
   // Listing Description
   const descriptionContainer = document.createElement("div");
@@ -121,7 +120,7 @@ export function singleListingCard(listing) {
     const newObj = { username: obj.bidderName, bid: obj.amount, date: obj.created };
     return newObj;
   });
-  console.log(newBidsArray);
+  
   const historyTable =  createTable(newBidsArray);
 
   historyContainer.append(historyTitle, historyTable);

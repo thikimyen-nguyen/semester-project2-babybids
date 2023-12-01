@@ -13,7 +13,7 @@ export async function showSingleListing(url) {
     singleListingCard(listing);
   } catch (error) {
     const pageContent = document.querySelector(".content");
-    // pageContent.classList.add("d-none")
+    pageContent.classList.add("d-none")
     loader.classList.add("bg-light");
     loader.innerHTML = message("error", error);
   }
