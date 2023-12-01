@@ -5,11 +5,13 @@ import {
   bidAttributes,
   bidBtnAttributes,
 } from "../data/setAttributes.mjs";
+import { createTable } from "./table.mjs";
 // single listing detail HTML
 
 export function singleListingCard(listing) {
   const { title, description, endsAt, _count, media, bids } = listing;
-
+  
+  
   const listingContainer = document.querySelector("#single-listing-container");
   const card = document.createElement("div");
   card.classList.add("row", "g-0");
@@ -114,24 +116,14 @@ export function singleListingCard(listing) {
   const historyTitle = document.createElement("p");
   historyTitle.classList.add("card-text", "text-secondary", "fs-4");
   historyTitle.innerText = "Bid History";
-
-  const historyTable = document.createElement("table");
-  historyTable.classList.add("table", "table-striped");
-  const tableHeader = document.createElement("thead");
-  tableHeader.classList.add("table-light");
-  const tableHeaderRow = document.createElement("tr");
-  const headers = ["#", "Username", "Bid at (NOK)", "Date"];
-
-  // Append headers to header row
-  headers.forEach(function (headerText) {
-    const th = document.createElement("th");
-    th.scope = "col";
-    th.textContent = headerText;
-    tableHeaderRow.appendChild(th);
+  // history table content
+  const newBidsArray = bids.map(function(obj) {
+    const newObj = { username: obj.bidderName, bid: obj.amount, date: obj.created };
+    return newObj;
   });
+  console.log(newBidsArray);
+  const historyTable =  createTable(newBidsArray);
 
-  tableHeaderRow.append(headers);
-  historyTable.append(tableHeader);
   historyContainer.append(historyTitle, historyTable);
 
   //  all append
