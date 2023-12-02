@@ -4,11 +4,10 @@ import { updateCountdown } from "../data/countdown.mjs";
 export function carouselListing(listings) {
   // filter listings
   const filteredListings = filterListings(listings);
-  console.log(filteredListings);
+ 
   // Create HTML
   filteredListings.forEach((listing, index) => {
     const { title, endsAt, media, id } = listing;
-    console.log(media);
     const carouselContainer = document.querySelector("#carousel-listings");
 
     const card = document.createElement("div");

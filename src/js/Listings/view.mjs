@@ -24,5 +24,5 @@ export async function showListings() {
   }
 }
 getSearchResults()
-// showResults()
+
 showListings();

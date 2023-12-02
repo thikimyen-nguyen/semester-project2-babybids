@@ -1,5 +1,4 @@
 import * as allGet from "./get.mjs";
 import * as allView from "./view.mjs";
-
-allGet()
-allView()
+import { scrollToListings } from "../data/scrollToListing.mjs";
+scrollToListings()
