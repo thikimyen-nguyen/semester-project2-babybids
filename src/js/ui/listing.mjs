@@ -94,7 +94,7 @@ export function singleListingCard(listing) {
     "pe-2",
   );
   noteLoginBtn.innerText = "Log In";
-
+  noteLoginBtn.setAttribute("id", "toLoginForm");
   bidNote.append("Please", noteLoginBtn, "to Bid");
   bidFormContainer.append(bidLabel, bidInput, bidBtn);
 

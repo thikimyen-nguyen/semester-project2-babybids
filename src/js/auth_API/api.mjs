@@ -19,4 +19,7 @@ const singleListingURL =
   bidsPara +
   "&" +
   sellerPara;
-export { allListingsURL, singleListingURL };
+
+  const registerEndpoint = "/auction/auth/register";
+  const registerURL = baseApi + registerEndpoint;
+export { allListingsURL, singleListingURL, registerURL };
