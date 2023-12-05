@@ -6,6 +6,7 @@ import { message, loader } from "../data/message.mjs";
 import { getSearchResults } from "../data/search.mjs";
 
 
+// show all listings on homepage
 export async function showListings() {
   loader.innerHTML = "";
   try {
@@ -23,6 +24,9 @@ export async function showListings() {
     loader.innerHTML = message("error", error);
   }
 }
-getSearchResults()
+
 
 showListings();
+// search function
+getSearchResults()
+

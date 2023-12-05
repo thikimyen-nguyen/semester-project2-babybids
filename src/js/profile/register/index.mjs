@@ -1,6 +1,6 @@
-import {postRegisterData} from "./post.mjs";
-import { registerURL } from "../auth_API/api.mjs";
-import {validateUserName, validateEmail, validatePassword, userName, email, password} from "../data/form-validate.mjs";
+import {register} from "./post.mjs";
+import { registerURL } from "../../auth_API/api.mjs";
+import {validateUserName, validateEmail, validatePassword, userName, email, password} from "../../data/form-validate.mjs";
 
 
 
@@ -22,7 +22,7 @@ export function registerAccount() {
           "password": password.value,
       };
       console.log(userRegisterInfo)
-      postRegisterData(registerURL, userRegisterInfo);
+      register(registerURL, userRegisterInfo);
       }
      
   })

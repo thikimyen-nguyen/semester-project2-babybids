@@ -22,4 +22,7 @@ const singleListingURL =
 
   const registerEndpoint = "/auction/auth/register";
   const registerURL = baseApi + registerEndpoint;
-export { allListingsURL, singleListingURL, registerURL };
+
+  const loginEndpoint = "/auction/auth/login";
+  const loginURL = baseApi + loginEndpoint;
+export { allListingsURL, singleListingURL, registerURL, loginURL };

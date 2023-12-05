@@ -1,7 +1,7 @@
-import { message } from "../data/message.mjs";
+import { message } from "../../data/message.mjs";
 
 // post data to register Account
-async function postRegisterData(url, data) {
+async function register(url, data) {
   try {
     const postOption = {
       method: 'POST',
@@ -38,4 +38,4 @@ async function postRegisterData(url, data) {
  
 }
 
-export { postRegisterData };
+export { register };
