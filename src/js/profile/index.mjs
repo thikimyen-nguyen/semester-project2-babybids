@@ -1,34 +1,18 @@
-import { showProfileHTML } from "../ui/profile.mjs";
-import { userToken } from "../auth_API/header.mjs";
-// show current user profile
+import * as register from "../profile/register/index.mjs";
+import * as login from "../profile/login/index.mjs";
 
-function getCurrentUser() {
-  const currentUserName = localStorage.getItem("currentUser");
-  const currentAvatar = JSON.parse(localStorage.getItem("avatar"));
-  const currentCredits = localStorage.getItem("credits");
+import { updateMedia } from "../profile/media/update.mjs";
+import { showUserProfile } from "../profile/credits/view.mjs";
 
-  const user = {
-    "userName": currentUserName,
-    "credits": currentCredits, 
-    "avatar": currentAvatar
-  }
-  return user
-}
-
-function showUserProfile() {
-  const userProfileContainer = document.querySelector("#userProfile");
-  const loginNav =  document.querySelector("#loginNav");
-  const logoutNav = document.querySelector("#logoutNav");
-  if (userToken) {
-    userProfileContainer.classList.remove("d-none");
-    loginNav.classList.add("d-none")
-    logoutNav.classList.remove("d-none")
-    const currentUser = getCurrentUser()
-    showProfileHTML(currentUser)
-
-  }
-  
-}
-
-showUserProfile()
+// All functions once registered user logged in
+// 1. A user with a stud.noroff.no email may register
+// 2. A registered user may login
+// 3. A registered user may logout
+// 4. A registered user may update their avatar
+updateMedia();
+// 5. A registered user may view their total credit - show user profile
+showUserProfile();
+// 6. A registered user may create a Listing with a title, deadline date, media gallery and description
+// 7. A registered user may add a Bid to another user’s Listing
+// 8. A registered user may view Bids made on a Listing
 

@@ -101,8 +101,10 @@
               <div>
                 <button
                   class="btn btn-outline-secondary pt-1 pb-1 ps-2 pe-2"
+                  data-bs-target="#updateAvatarModal" 
+                  data-bs-toggle="modal"
                 >
-                  Change Avatar
+                  Update Avatar
                 </button>
                 <button
                   class="add-post-button btn btn-primary pt-1 pb-1 ps-2 pe-2"
@@ -242,6 +244,7 @@
         </div>
       </div>
     </div>
+    <!-- register modal -->
     <div class="modal fade" id="registerModal" aria-hidden="true" aria-labelledby="registerModalLabel" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -320,6 +323,40 @@
         </div>
       </div>
     </div>
-    
+    <!-- change avatar modal -->
+    <div class="modal fade" id="updateAvatarModal" aria-hidden="true" aria-labelledby="updateAvatarModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="loginModalLabel">Update Avatar</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          
+            <div class="mediaNote"></div>
+            <form class="needs-validation" id="updateAvatarForm">
+              <div class="mb-4">
+                <label for="media" class="form-label fs-4">Image Link</label>
+                <input
+                  type="url"
+                  class="form-control"
+                  name="media"
+                  placeholder="Url to your image"
+                  id="media"
+                  aria-required="true"
+                  required
+                />
+              </div>
+            
+              <div class="text-center mb-5">
+                <button type="submit" class="btn btn-primary w-50">
+                  Update
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
