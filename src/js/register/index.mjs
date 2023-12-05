@@ -1,6 +1,6 @@
 import {postRegisterData} from "./post.mjs";
 import { registerURL } from "../auth_API/api.mjs";
-import {validateUserName, validateEmail, validatePassword, userName, email, password, emailLogin, loginPassword } from "../data/form-validate.mjs";
+import {validateUserName, validateEmail, validatePassword, userName, email, password} from "../data/form-validate.mjs";
 
 
 

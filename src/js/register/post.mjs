@@ -15,7 +15,13 @@ async function postRegisterData(url, data) {
     const json = await response.json();
     console.log(json)
     if (response.ok) {
-      alert("Your account was registered successfully!")
+      alert("Your account was registered successfully! You can now Log In");
+      // window.location.reload();
+      // const registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
+      // registerModal.hide(); 
+      // const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+      // loginModal.show(); 
+      
       // loginForm.classList.remove("d-none");
       // createAccountForm.classList.add("d-none");
     } else {

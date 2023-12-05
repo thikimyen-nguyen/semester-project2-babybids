@@ -67,3 +67,5 @@ Before you start, ensure you have the following installed:
 <a href="https://www.freepik.com/free-photo/pink-girlish-composition-newborn_1776539.htm#query=baby%20table&position=3&from_view=search&track=ais&uuid=f4b9f9d5-89fd-4c50-bc93-05f83b9123e1">Image by Freepik</a>
 <a href="https://www.freepik.com/free-vector/baby-room-text-with-realistic-crib-cute-toys-white-background-vector-illustration_31643886.htm#page=2&query=baby%20on%20board&position=19&from_view=search&track=ais&uuid=8a1b85cb-168e-493c-8eab-19a4adfcea4f">Image by macrovector</a> on Freepik
 <a href="https://www.freepik.com/free-vector/baby-bedroom-interior-elements-vector-illustrations-set_45256109.htm#query=kid%20products&position=15&from_view=search&track=ais&uuid=1f478494-9887-4bdc-88b0-eab67083df21">Image by Verazinha</a> on Freepik
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9bd35427-15e4-43a9-a0ae-f3826c9e2530/deploy-status)](https://app.netlify.com/sites/babeebids/deploys)
