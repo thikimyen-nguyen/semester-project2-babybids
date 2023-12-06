@@ -14,8 +14,8 @@ async function login(url, data) {
       const {accessToken, name, avatar, credits} = json;
       localStorage.setItem('accessToken', accessToken);
       localStorage.setItem("currentUser", name);
-      localStorage.setItem("avatar", avatar);
-      localStorage.setItem("credits", credits);
+      // localStorage.setItem("avatar", avatar);
+      // localStorage.setItem("credits", credits);
       console.log(json)
       // Redirect to feed page
       if (response.ok) {

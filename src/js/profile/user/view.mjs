@@ -1,7 +1,12 @@
 import { showProfileHTML } from "../../ui/profile.mjs";
 import { userToken } from "../../auth_API/header.mjs";
+import { currentProfileURL, getCurrentProfile } from "./get.mjs";
+
+
 
 function getCurrentUser() {
+  getCurrentProfile(currentProfileURL);
+ 
   const currentUserName = localStorage.getItem("currentUser");
   const currentAvatar = localStorage.getItem("avatar");
   const currentCredits = localStorage.getItem("credits");
@@ -11,6 +16,7 @@ function getCurrentUser() {
     "credits": currentCredits, 
     "avatar": currentAvatar
   }
+  console.log(user)
   return user
 }
 

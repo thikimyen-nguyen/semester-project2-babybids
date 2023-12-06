@@ -2,7 +2,7 @@ import * as register from "../profile/register/index.mjs";
 import * as login from "../profile/login/index.mjs";
 
 import { updateMedia } from "../profile/media/update.mjs";
-import { showUserProfile } from "../profile/credits/view.mjs";
+import { showUserProfile } from "../profile/user/view.mjs";
 
 // All functions once registered user logged in
 // 1. A user with a stud.noroff.no email may register
