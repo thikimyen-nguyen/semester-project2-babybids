@@ -2,35 +2,24 @@ import { showProfileHTML } from "../../ui/profile.mjs";
 import { userToken } from "../../auth_API/header.mjs";
 import { currentProfileURL, getCurrentProfile } from "./get.mjs";
 
-
-
-function getCurrentUser() {
-  getCurrentProfile(currentProfileURL);
- 
-  const currentUserName = localStorage.getItem("currentUser");
-  const currentAvatar = localStorage.getItem("avatar");
-  const currentCredits = localStorage.getItem("credits");
-
-  const user = {
-    "userName": currentUserName,
-    "credits": currentCredits, 
-    "avatar": currentAvatar
-  }
-  console.log(user)
-  return user
-}
-
-export function showUserProfile() {
+export async function showUserProfile() {
   const userProfileContainer = document.querySelector("#userProfile");
-  const loginNav =  document.querySelector("#loginNav");
+  const loginNav = document.querySelector("#loginNav");
   const logoutNav = document.querySelector("#logoutNav");
+
+  const currentUser = await getCurrentProfile(currentProfileURL);
+
+  const { name, avatar, credits } = currentUser;
+  const user = {
+    userName: name,
+    credits: credits,
+    avatar: avatar,
+  };
+  console.log(currentUser);
   if (userToken) {
     userProfileContainer.classList.remove("d-none");
-    loginNav.classList.add("d-none")
-    logoutNav.classList.remove("d-none")
-    const currentUser = getCurrentUser()
-    showProfileHTML(currentUser)
-
+    loginNav.classList.add("d-none");
+    logoutNav.classList.remove("d-none");
+    showProfileHTML(user);
   }
-  
 }
