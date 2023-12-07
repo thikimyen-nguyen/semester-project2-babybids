@@ -1,12 +1,17 @@
+import { showListingsCards } from "../ui/listings.mjs";
+import * as login from "../profile/login/index.mjs";
+import * as register from "../profile/register/index.mjs";
+import { userToken } from "../auth_API/token.mjs";
+import { loginNav, logoutNav } from "../profile/user/view.mjs";
+
+import { scrollToListings } from "./scrollToListing.mjs";
+scrollToListings();
+
 /**
  * get source of posts to be searched
  * create function to filter posts with param
  * get input search and pass as param
  */
-import { showListingsCards } from "../ui/listings.mjs";
-import { scrollToListings } from "./scrollToListing.mjs";
-scrollToListings();
-
 const searchInput = document.querySelector(".search-form");
 
 function search(param) {
@@ -32,7 +37,7 @@ function search(param) {
  * reset search form
  * Show the number of posts result and show posts in html with postsHtml()
  */
-function getSearchResults() {
+export function getSearchResults() {
   searchInput.addEventListener("submit", function (event) {
     event.preventDefault();
     localStorage.removeItem("searchResults");
@@ -62,5 +67,9 @@ function showResults() {
 }
 
 showResults();
+// navbar shown
 
-export { getSearchResults };
+if (userToken) {
+  loginNav.classList.add("d-none");
+  logoutNav.classList.remove("d-none");
+}

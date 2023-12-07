@@ -2,10 +2,10 @@ import { showProfileHTML } from "../../ui/profile.mjs";
 import { userToken } from "../../auth_API/token.mjs";
 import { currentProfileURL, getCurrentProfile } from "./get.mjs";
 
+export const loginNav = document.querySelector("#loginNav");
+export const logoutNav = document.querySelector("#logoutNav");
 export async function showUserProfile() {
   const userProfileContainer = document.querySelector("#userProfile");
-  const loginNav = document.querySelector("#loginNav");
-  const logoutNav = document.querySelector("#logoutNav");
 
   if (userToken) {
     const currentUser = await getCurrentProfile(currentProfileURL);
