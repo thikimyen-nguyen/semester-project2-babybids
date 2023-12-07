@@ -54,10 +54,19 @@
           >
             <ul class="navbar-nav mb-2 mb-lg-0 fw-bolder text-uppercase">
               <li class="nav-item">
-                <a class="nav-link" href="#listings" id="scrollToListings">Listings</a>
+                <a class="nav-link" href="#listings" id="scrollToListings"
+                  >Listings</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-target="#loginModal" data-bs-toggle="modal" id="loginNav">Log In</a>
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-bs-target="#loginModal"
+                  data-bs-toggle="modal"
+                  id="loginNav"
+                  >Log In</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link d-none" href="#" id="logoutNav">Log Out</a>
@@ -90,9 +99,7 @@
           <div
             class="d-flex flex-row align-items-center mb-1 justify-content-center col-12"
           >
-            <div
-              class="text-secondary text-decoration-none align-items-center"
-            >
+            <div class="text-secondary text-decoration-none align-items-center">
               <a
                 class="d-flex flex-row flex-wrap align-items-cente justify-content-center mb-3 text-decoration-none"
                 href="./profile/index.html"
@@ -101,7 +108,7 @@
               <div>
                 <button
                   class="btn btn-outline-secondary pt-1 pb-1 ps-2 pe-2"
-                  data-bs-target="#updateAvatarModal" 
+                  data-bs-target="#updateAvatarModal"
                   data-bs-toggle="modal"
                 >
                   Update Avatar
@@ -114,35 +121,52 @@
               </div>
             </div>
           </div>
-         
         </div>
       </div>
-      <!-- <hr class="text-danger"> -->
     </header>
 
     <main class="mt-1">
       <div class="container">
-        <div class="loader text-center fs-3 text-secondary">
-          Loading...
-        </div>
+        <div class="loader text-center fs-3 text-secondary">Loading...</div>
         <div class="row content">
           <div>
-            <h2 class="text-center text-capitalize text-secondary mt-5 border-bottom border-danger">last chance</h2>
+            <h2
+              class="text-center text-capitalize text-secondary mt-5 border-bottom border-danger"
+            >
+              last chance
+            </h2>
             <!-- Last chance listings display -->
-            <div id="carouselExampleAutoplaying" class="carousel slide col-lg-8 m-auto" data-bs-ride="carousel">
-              <div class="carousel-inner" id="carousel-listings">
-               
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <div
+              id="carouselExampleAutoplaying"
+              class="carousel slide col-lg-8 m-auto"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner" id="carousel-listings"></div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
-           
           </div>
 
           <!-- Intro area-->
@@ -163,14 +187,17 @@
           </div>
 
           <!-- All listings area -->
-          <div class="pt-5 mt-5" id="listings" >
+          <div class="pt-5 mt-5" id="listings">
             <h1
               class="text-center text-secondary border-bottom border-danger text-uppercase"
             >
               all listings
             </h1>
             <!-- Lists of listing cards -->
-            <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4 g-4 mt-3" id="listings-container"></div>
+            <div
+              class="row row-cols-1 row-cols-md-3 row-cols-xl-4 g-4 mt-3"
+              id="listings-container"
+            ></div>
           </div>
         </div>
       </div>
@@ -184,12 +211,23 @@
       <div class="pb-5 fs-6">&copy; All rights reserved.</div>
     </footer>
     <!-- Login form modal -->
-    <div class="modal fade" id="loginModal" aria-hidden="true" aria-labelledby="loginModalLabel" tabindex="-1">
+    <div
+      class="modal fade"
+      id="loginModal"
+      aria-hidden="true"
+      aria-labelledby="loginModalLabel"
+      tabindex="-1"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="loginModalLabel">Log In</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
             <div class="text-center">
@@ -228,29 +266,56 @@
                   minlength="8"
                   required
                 />
-                <div class="invalid-feedback">Please enter correct password.</div>
+                <div class="invalid-feedback">
+                  Please enter correct password.
+                </div>
               </div>
               <div class="text-center mb-5">
-                <button type="submit" class="btn btn-primary w-50" id="login-btn">
+                <button
+                  type="submit"
+                  class="btn btn-primary w-50"
+                  id="login-btn"
+                >
                   Log In
                 </button>
               </div>
             </form>
           </div>
           <div class="modal-footer">
-            <div class="form-text text-center mb-2">Don't have an Account yet?</div>
-            <button class="btn btn-outline-secondary" data-bs-target="#registerModal" data-bs-toggle="modal">Register</button>
+            <div class="form-text text-center mb-2">
+              Don't have an Account yet?
+            </div>
+            <button
+              class="btn btn-outline-secondary"
+              data-bs-target="#registerModal"
+              data-bs-toggle="modal"
+            >
+              Register
+            </button>
           </div>
         </div>
       </div>
     </div>
     <!-- register modal -->
-    <div class="modal fade" id="registerModal" aria-hidden="true" aria-labelledby="registerModalLabel" tabindex="-1">
+    <div
+      class="modal fade"
+      id="registerModal"
+      aria-hidden="true"
+      aria-labelledby="registerModalLabel"
+      tabindex="-1"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="registerModalLabel">Register New Account</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h1 class="modal-title fs-5" id="registerModalLabel">
+              Register New Account
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
             <div class="text-center">
@@ -274,8 +339,8 @@
                   required
                 />
                 <div class="invalid-feedback" id="name_error">
-                  Username must not contain punctuation symbols apart from underscore
-                  (_) and max 20 characters.
+                  Username must not contain punctuation symbols apart from
+                  underscore (_) and max 20 characters.
                 </div>
               </div>
               <div class="mb-4">
@@ -310,29 +375,51 @@
                 </div>
               </div>
               <div class="text-center mb-5">
-                <button type="submit" class="btn btn-primary w-50" id="createAcc-btn">
+                <button
+                  type="submit"
+                  class="btn btn-primary w-50"
+                  id="createAcc-btn"
+                >
                   Register
                 </button>
               </div>
             </form>
           </div>
           <div class="modal-footer">
-            <div class="form-text mb-2 text-center">Already have an account?</div>
-            <button class="btn btn-outline-secondary" data-bs-target="#loginModal" data-bs-toggle="modal">Log In</button>
+            <div class="form-text mb-2 text-center">
+              Already have an account?
+            </div>
+            <button
+              class="btn btn-outline-secondary"
+              data-bs-target="#loginModal"
+              data-bs-toggle="modal"
+            >
+              Log In
+            </button>
           </div>
         </div>
       </div>
     </div>
     <!-- change avatar modal -->
-    <div class="modal fade" id="updateAvatarModal" aria-hidden="true" aria-labelledby="updateAvatarModal" tabindex="-1">
+    <div
+      class="modal fade"
+      id="updateAvatarModal"
+      aria-hidden="true"
+      aria-labelledby="updateAvatarModal"
+      tabindex="-1"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="loginModalLabel">Update Avatar</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
-          
             <div class="mediaNote"></div>
             <form class="needs-validation" id="updateAvatarForm">
               <div class="mb-4">
@@ -347,7 +434,7 @@
                   required
                 />
               </div>
-            
+
               <div class="text-center mb-5">
                 <button type="submit" class="btn btn-primary w-50">
                   Update

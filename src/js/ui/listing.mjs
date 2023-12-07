@@ -4,15 +4,17 @@ import {
   setAttributes,
   bidAttributes,
   bidBtnAttributes,
+  loginAttributes,
 } from "../data/setAttributes.mjs";
 import { createTable } from "./table.mjs";
+import { userToken } from "../auth_API/header.mjs";
 // single listing detail HTML
 
 export function singleListingCard(listing) {
   const { title, description, endsAt, media, bids } = listing;
   const pageTitle = document.querySelector("title");
   pageTitle.innerText = title;
-  
+
   const listingContainer = document.querySelector("#single-listing-container");
   const card = document.createElement("div");
   card.classList.add("row", "g-0");
@@ -93,11 +95,11 @@ export function singleListingCard(listing) {
     "ps-2",
     "pe-2",
   );
+  setAttributes(noteLoginBtn, loginAttributes);
   noteLoginBtn.innerText = "Log In";
   noteLoginBtn.setAttribute("id", "toLoginForm");
   bidNote.append("Please", noteLoginBtn, "to Bid");
   bidFormContainer.append(bidLabel, bidInput, bidBtn);
-
 
   // Listing Description
   const descriptionContainer = document.createElement("div");
@@ -112,17 +114,24 @@ export function singleListingCard(listing) {
 
   // Bid History - only viewwd by logged in user
   const historyContainer = document.createElement("div");
-  historyContainer.classList.add("mt-5");
+  historyContainer.classList.add("mt-5", "d-none");
+  if (userToken) {
+    historyContainer.classList.remove("d-none");
+  }
   const historyTitle = document.createElement("p");
   historyTitle.classList.add("card-text", "text-secondary", "fs-4");
   historyTitle.innerText = "Bid History";
   // history table content
-  const newBidsArray = bids.map(function(obj) {
-    const newObj = { username: obj.bidderName, bid: obj.amount, date: obj.created };
+  const newBidsArray = bids.map(function (obj) {
+    const newObj = {
+      username: obj.bidderName,
+      bid: obj.amount,
+      date: obj.created,
+    };
     return newObj;
   });
-  
-  const historyTable =  createTable(newBidsArray);
+
+  const historyTable = createTable(newBidsArray);
 
   historyContainer.append(historyTitle, historyTable);
 

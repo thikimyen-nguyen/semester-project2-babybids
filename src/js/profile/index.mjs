@@ -4,6 +4,7 @@ import { showUserProfile } from "../profile/user/view.mjs";
 // All functions registered user can do once logged in
 // 1. A user with a stud.noroff.no email may register
 import * as register from "../profile/register/index.mjs";
+
 // 2. A registered user may login
 import * as login from "../profile/login/index.mjs";
 // 3. A registered user may logout

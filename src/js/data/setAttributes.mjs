@@ -1,6 +1,13 @@
+// export function setAttributes(element, attributes) {
+//   for (var key in attributes) {
+//     if (attributes.hasOwnProperty(key)) {
+//       element.setAttribute(key, attributes[key]);
+//     }
+//   }
+// }
 export function setAttributes(element, attributes) {
-  for (var key in attributes) {
-    if (attributes.hasOwnProperty(key)) {
+  for (const key in attributes) {
+    if (Object.prototype.hasOwnProperty.call(attributes, key)) {
       element.setAttribute(key, attributes[key]);
     }
   }
@@ -15,4 +22,9 @@ export const bidAttributes = {
 export const bidBtnAttributes = {
   type: "submit",
   id: "bid-button",
+};
+
+export const loginAttributes = {
+  "data-bs-target": "#loginModal",
+  "data-bs-toggle": "modal",
 };

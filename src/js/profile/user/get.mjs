@@ -15,6 +15,7 @@ export async function getCurrentProfile(url) {
       Authorization: `Bearer ${userToken}`,
     },
   };
+
   const response = await fetch(url, postOption);
   const user = await response.json();
   // const {avatar, credits} = user;
