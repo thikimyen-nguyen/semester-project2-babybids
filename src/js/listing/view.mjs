@@ -2,7 +2,7 @@ import { singleListingURL } from "../auth_API/api.mjs";
 import { getOneListing } from "../listing/get.mjs";
 import { message, loader } from "../data/message.mjs";
 import { singleListingCard } from "../ui/listing.mjs";
-import {getSearchResults  } from "../data/search.mjs";
+import { getSearchResults } from "../data/search.mjs";
 
 console.log(singleListingURL);
 export async function showSingleListing(url) {
@@ -14,10 +14,10 @@ export async function showSingleListing(url) {
     singleListingCard(listing);
   } catch (error) {
     const pageContent = document.querySelector(".content");
-    pageContent.classList.add("d-none")
+    pageContent.classList.add("d-none");
     loader.classList.add("bg-light");
     loader.innerHTML = message("error", error);
   }
 }
 showSingleListing(singleListingURL);
-getSearchResults()
+getSearchResults();

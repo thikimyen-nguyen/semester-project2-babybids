@@ -8,6 +8,8 @@ import {
 } from "../data/setAttributes.mjs";
 import { createTable } from "./table.mjs";
 import { userToken } from "../auth_API/token.mjs";
+import { postBid } from "../profile/bid/index.mjs";
+import { bidURL } from "../auth_API/api.mjs";
 // single listing detail HTML
 
 export function singleListingCard(listing) {
@@ -55,7 +57,7 @@ export function singleListingCard(listing) {
   endDateValue.innerText = updateCountdown(endsAt);
 
   endDateContainer.append(endDate, endDateValue);
-  // listing last Bid value shown
+  // listing highest Bid value shown
   const highestBidContainer = document.createElement("div");
   highestBidContainer.classList.add("d-flex", "flex-row");
   const highestBid = document.createElement("p");
@@ -72,12 +74,12 @@ export function singleListingCard(listing) {
 
   // Bid form
   const bidFormContainer = document.createElement("form");
-  bidFormContainer.classList.add("d-flex", "flex-row");
+  bidFormContainer.classList.add("d-flex", "flex-row", "bidForm");
   const bidLabel = document.createElement("label");
   bidLabel.setAttribute("for", "bid");
   // Bid input form
   const bidInput = document.createElement("input");
-  bidInput.classList.add("form-control");
+  bidInput.classList.add("form-control", "bidInput");
   setAttributes(bidInput, bidAttributes);
 
   const bidBtn = document.createElement("button");
@@ -85,6 +87,20 @@ export function singleListingCard(listing) {
   bidBtn.innerText = "Bid";
   setAttributes(bidBtn, bidBtnAttributes);
   bidBtn.disabled = true;
+  // bid function
+  bidFormContainer.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (bidInput.value > getMaxAmount(bids)) {
+      const bidValue = {
+        amount: parseFloat(bidInput.value) || 0,
+      };
+      console.log(bidValue);
+      postBid(bidURL, bidValue);
+    } else {
+      alert("Your bid must be greater than current highest bid");
+    }
+  });
+
   // note to log in
   const bidNote = document.createElement("p");
   bidNote.classList.add("text-secondary", "text-center", "mt-2");
@@ -96,10 +112,10 @@ export function singleListingCard(listing) {
     "ps-2",
     "pe-2",
   );
-  
+
   setAttributes(noteLoginBtn, loginAttributes);
   noteLoginBtn.innerText = "Log In";
- 
+
   bidNote.append("Please", noteLoginBtn, "to Bid");
   bidFormContainer.append(bidLabel, bidInput, bidBtn);
 
@@ -117,7 +133,7 @@ export function singleListingCard(listing) {
   // Bid History - only viewwd by logged in user
   const historyContainer = document.createElement("div");
   historyContainer.classList.add("mt-5", "d-none");
- 
+
   const historyTitle = document.createElement("p");
   historyTitle.classList.add("card-text", "text-secondary", "fs-4");
   historyTitle.innerText = "Bid History";

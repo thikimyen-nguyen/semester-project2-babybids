@@ -20,14 +20,21 @@ const singleListingURL =
   "&" +
   sellerPara;
 
-  const registerEndpoint = "/auction/auth/register";
-  const registerURL = baseApi + registerEndpoint;
+const registerEndpoint = "/auction/auth/register";
+const registerURL = baseApi + registerEndpoint;
 
-  const loginEndpoint = "/auction/auth/login";
-  const loginURL = baseApi + loginEndpoint;
+const loginEndpoint = "/auction/auth/login";
+const loginURL = baseApi + loginEndpoint;
 
-  const profileEndpoint = "/auction/profiles";
-  const profileURL = baseApi + profileEndpoint
+const profileEndpoint = "/auction/profiles";
+const profileURL = baseApi + profileEndpoint;
 
-  
-export { allListingsURL, singleListingURL, registerURL, loginURL, profileURL };
+const bidURL = baseApi + singleListingEndpoint + "/" + id + "/bids";
+export {
+  allListingsURL,
+  singleListingURL,
+  registerURL,
+  loginURL,
+  profileURL,
+  bidURL,
+};

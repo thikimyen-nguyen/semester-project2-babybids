@@ -1,7 +1,7 @@
 import { userToken } from "../../auth_API/token.mjs";
 import { profileURL } from "../../auth_API/api.mjs";
 import { message } from "../../data/message.mjs";
-export async function updateAvatar(url, data) {
+export async function postAvatar(url, data) {
   try {
     const putDataOption = {
       method: "PUT",
@@ -41,7 +41,7 @@ export function updateMedia() {
       avatar: avatarInput.value,
     };
 
-    updateAvatar(updateMediaURL, newAvatar);
+    postAvatar(updateMediaURL, newAvatar);
   });
 }
 
