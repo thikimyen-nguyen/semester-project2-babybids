@@ -8,6 +8,7 @@ import * as register from "../profile/register/index.mjs";
 // 2. A registered user may login
 import * as login from "../profile/login/index.mjs";
 // 3. A registered user may logout
+import * as logout from "../profile/logout/index.mjs";
 // 4. A registered user may update their avatar
 updateMedia();
 // 5. A registered user may view their total credit - show user profile

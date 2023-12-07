@@ -3,7 +3,7 @@ import * as login from "../profile/login/index.mjs";
 import * as register from "../profile/register/index.mjs";
 import { userToken } from "../auth_API/token.mjs";
 import { loginNav, logoutNav } from "../profile/user/view.mjs";
-
+import { logout } from "../profile/logout/index.mjs";
 import { scrollToListings } from "./scrollToListing.mjs";
 scrollToListings();
 
@@ -73,3 +73,6 @@ if (userToken) {
   loginNav.classList.add("d-none");
   logoutNav.classList.remove("d-none");
 }
+
+// logout
+logout();
