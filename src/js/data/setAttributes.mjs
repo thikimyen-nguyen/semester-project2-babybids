@@ -1,10 +1,4 @@
-// export function setAttributes(element, attributes) {
-//   for (var key in attributes) {
-//     if (attributes.hasOwnProperty(key)) {
-//       element.setAttribute(key, attributes[key]);
-//     }
-//   }
-// }
+
 export function setAttributes(element, attributes) {
   for (const key in attributes) {
     if (Object.prototype.hasOwnProperty.call(attributes, key)) {

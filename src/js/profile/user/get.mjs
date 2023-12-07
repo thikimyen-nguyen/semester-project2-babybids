@@ -1,7 +1,7 @@
 //  get current user info
 
 import { profileURL } from "../../auth_API/api.mjs";
-import { userToken } from "../../auth_API/header.mjs";
+import { userToken } from "../../auth_API/token.mjs";
 
 const currentUserName = localStorage.getItem("currentUser");
 

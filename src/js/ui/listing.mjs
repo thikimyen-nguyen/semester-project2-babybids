@@ -7,7 +7,7 @@ import {
   loginAttributes,
 } from "../data/setAttributes.mjs";
 import { createTable } from "./table.mjs";
-import { userToken } from "../auth_API/header.mjs";
+import { userToken } from "../auth_API/token.mjs";
 // single listing detail HTML
 
 export function singleListingCard(listing) {
@@ -75,7 +75,7 @@ export function singleListingCard(listing) {
   bidFormContainer.classList.add("d-flex", "flex-row");
   const bidLabel = document.createElement("label");
   bidLabel.setAttribute("for", "bid");
-  // Bid input
+  // Bid input form
   const bidInput = document.createElement("input");
   bidInput.classList.add("form-control");
   setAttributes(bidInput, bidAttributes);
@@ -84,6 +84,7 @@ export function singleListingCard(listing) {
   bidBtn.classList.add("btn", "btn-primary", "ms-1");
   bidBtn.innerText = "Bid";
   setAttributes(bidBtn, bidBtnAttributes);
+  bidBtn.disabled = true;
   // note to log in
   const bidNote = document.createElement("p");
   bidNote.classList.add("text-secondary", "text-center", "mt-2");
@@ -95,9 +96,10 @@ export function singleListingCard(listing) {
     "ps-2",
     "pe-2",
   );
+  
   setAttributes(noteLoginBtn, loginAttributes);
   noteLoginBtn.innerText = "Log In";
-  noteLoginBtn.setAttribute("id", "toLoginForm");
+ 
   bidNote.append("Please", noteLoginBtn, "to Bid");
   bidFormContainer.append(bidLabel, bidInput, bidBtn);
 
@@ -115,9 +117,7 @@ export function singleListingCard(listing) {
   // Bid History - only viewwd by logged in user
   const historyContainer = document.createElement("div");
   historyContainer.classList.add("mt-5", "d-none");
-  if (userToken) {
-    historyContainer.classList.remove("d-none");
-  }
+ 
   const historyTitle = document.createElement("p");
   historyTitle.classList.add("card-text", "text-secondary", "fs-4");
   historyTitle.innerText = "Bid History";
@@ -146,4 +146,11 @@ export function singleListingCard(listing) {
   cardBodyContainer.append(cardBody);
   card.append(imageContainer, cardBodyContainer);
   listingContainer.append(card, descriptionContainer, historyContainer);
+
+  // if logged in user
+  if (userToken) {
+    historyContainer.classList.remove("d-none");
+    bidNote.classList.add("d-none");
+    bidBtn.disabled = false;
+  }
 }

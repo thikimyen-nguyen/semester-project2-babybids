@@ -1,5 +1,5 @@
 import { showProfileHTML } from "../../ui/profile.mjs";
-import { userToken } from "../../auth_API/header.mjs";
+import { userToken } from "../../auth_API/token.mjs";
 import { currentProfileURL, getCurrentProfile } from "./get.mjs";
 
 export async function showUserProfile() {

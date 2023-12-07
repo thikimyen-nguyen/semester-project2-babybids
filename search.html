@@ -57,7 +57,12 @@
                 <a class="nav-link" href="#" id="scrollToListings">Listings</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" id="toLoginForm">Log In</a>
+                <a class="nav-link" href="#" data-bs-target="#loginModal"
+                data-bs-toggle="modal"
+                id="loginNav">Log In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-none" href="#" id="logoutNav">Log Out</a>
               </li>
             </ul>
             <form class="d-flex ms-5 search-form" role="search">
@@ -85,9 +90,7 @@
 
     <main class="mt-1">
       <div class="container">
-        <!-- <div class="loader text-center fs-3 text-secondary">
-          Loading...
-        </div> -->
+    
         <div class="pt-5 mt-5" >
           <h1
             class="text-center text-secondary border-bottom border-danger text-capitalize resultsNumber"

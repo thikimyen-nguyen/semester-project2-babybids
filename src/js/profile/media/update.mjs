@@ -1,4 +1,4 @@
-import { userToken } from "../../auth_API/header.mjs";
+import { userToken } from "../../auth_API/token.mjs";
 import { profileURL } from "../../auth_API/api.mjs";
 
 export async function updateAvatar(url, data) {
