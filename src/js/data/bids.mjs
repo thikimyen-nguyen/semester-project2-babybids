@@ -3,7 +3,7 @@ export function getMaxAmount(array) {
   // Check if the array is empty
   if (array.length === 0) {
     console.error("Array is empty");
-    return "_";
+    return 0;
   }
 
   let maxAmount = array.reduce(
