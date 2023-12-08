@@ -99,7 +99,7 @@
             <div class="text-secondary text-decoration-none align-items-center">
               <a
                 class="d-flex flex-row flex-wrap align-items-cente justify-content-center mb-3 text-decoration-none"
-                href="./profile/index.html"
+                href="../profile.html"
                 id="profile-container"
               ></a>
               <div>
@@ -112,6 +112,8 @@
                 </button>
                 <button
                   class="add-post-button btn btn-primary pt-1 pb-1 ps-2 pe-2"
+                  data-bs-target="#createListingModal"
+                  data-bs-toggle="modal"
                 >
                   New Listing
                 </button>
@@ -153,7 +155,9 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="loginModalLabel">Log In</h1>
+            <h1 class="modal-title fs-5 text-secondary" id="loginModalLabel">
+              Log In
+            </h1>
             <button
               type="button"
               class="btn-close"
@@ -239,7 +243,7 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="registerModalLabel">
+            <h1 class="modal-title fs-5 text-secondary" id="registerModalLabel">
               Register New Account
             </h1>
             <button
@@ -343,7 +347,9 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="loginModalLabel">Update Avatar</h1>
+            <h1 class="modal-title fs-5 text-secondary" id="loginModalLabel">
+              Update Avatar
+            </h1>
             <button
               type="button"
               class="btn-close"
@@ -370,6 +376,105 @@
               <div class="text-center mb-5">
                 <button type="submit" class="btn btn-primary w-50">
                   Update
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- create new listing -->
+    <div
+      class="modal fade"
+      id="createListingModal"
+      aria-hidden="true"
+      aria-labelledby="createListingModal"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-secondary" id="createListingLabel">
+              Create New Listing
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="createListingNote"></div>
+            <form
+              class="create-post-form needs-validation justify-content-center m-auto"
+              id="createListingForm"
+            >
+              <div class="mb-4">
+                <label for="title" class="form-label fs-4">Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="title"
+                  minlength="4"
+                  placeholder="Minimum 04 charaters"
+                  aria-required="true"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label for="description" class="form-label fs-4"
+                  >Description</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  name="description"
+                  minlength="10"
+                  placeholder="Minimum 10 characters"
+                  aria-required="true"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label for="date" class="form-label fs-4">End Date</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  name="date"
+                  aria-required="true"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label for="media" class="form-label fs-4">Image Link</label>
+                <input
+                  type="url"
+                  class="form-control"
+                  name="media"
+                  placeholder="Url to your image"
+                  aria-required="true"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label for="tags" class="form-label fs-4">Tags</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="tags"
+                  placeholder="Separate tags by commas "
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="text-center mb-5">
+                <button
+                  type="submit"
+                  class="btn btn-primary w-50"
+                  id="createListingBtn"
+                >
+                  Create
                 </button>
               </div>
             </form>

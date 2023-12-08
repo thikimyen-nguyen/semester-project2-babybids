@@ -30,6 +30,7 @@ const profileEndpoint = "/auction/profiles";
 const profileURL = baseApi + profileEndpoint;
 
 const bidURL = baseApi + singleListingEndpoint + "/" + id + "/bids";
+const createListingURL = baseApi + singleListingEndpoint;
 export {
   allListingsURL,
   singleListingURL,
@@ -37,4 +38,5 @@ export {
   loginURL,
   profileURL,
   bidURL,
+  createListingURL,
 };
