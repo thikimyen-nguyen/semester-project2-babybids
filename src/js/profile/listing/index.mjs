@@ -22,6 +22,7 @@ createListingForm.addEventListener("submit", function createNewListing(event) {
     listing.tags = tagsArray;
     listing.media = mediaArray;
     listing.endsAt = formattedDate;
+    console.log(listing);
     create(createListingURL, listing);
   } catch (error) {
     const loader = document.querySelector(".createListingNote");

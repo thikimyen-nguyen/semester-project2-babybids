@@ -1,5 +1,5 @@
 const baseApi = "https://api.noroff.dev/api/v1";
-const listingsEndpoint = "/auction/listings?_active=true";
+const listingsEndpoint = "/auction/listings?_active=true&_tag=babee";
 const allListingsURL = baseApi + listingsEndpoint;
 const singleListingEndpoint = "/auction/listings";
 const sellerPara = "_seller=true";
