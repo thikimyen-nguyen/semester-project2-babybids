@@ -23,8 +23,6 @@ createListingForm.addEventListener("submit", function createNewListing(event) {
     listing.media = mediaArray;
     listing.endsAt = formattedDate;
     create(createListingURL, listing);
-    //  console.log(listing)
-    //   window.location.href = "./profile.html"
   } catch (error) {
     const loader = document.querySelector(".createListingNote");
     loader.classList.add("text-secondary", "bg-light");

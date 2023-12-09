@@ -13,6 +13,7 @@ export async function showUserListings() {
   if (profileListings) {
     loader.innerHTML = "";
     try {
+      localStorage.removeItem("currentUserListings");
       const listings = await getCurrentUserListings(currentUserListingsURL);
       localStorage.setItem("currentUserListings", JSON.stringify(listings));
       showListingsCards(listings);

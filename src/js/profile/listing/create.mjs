@@ -15,6 +15,7 @@ export async function create(url, data) {
   console.log(json);
   if (response.ok) {
     alert("Your listing was created successfully!");
+    window.location.href = "../profile.html";
   } else {
     throw new Error("Could not create listing.Please try again!");
   }
