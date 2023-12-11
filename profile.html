@@ -291,7 +291,7 @@
                 </div>
               </div>
               <div class="mb-4">
-                <label for="email" class="form-label">Email</label>
+                <label for="email-register" class="form-label">Email</label>
                 <input
                   type="email"
                   class="form-control"
@@ -306,7 +306,9 @@
                 </div>
               </div>
               <div class="mb-4">
-                <label for="password" class="form-label">Password</label>
+                <label for="password-register" class="form-label"
+                  >Password</label
+                >
                 <input
                   type="password"
                   class="form-control"
@@ -427,6 +429,7 @@
                   type="text"
                   class="form-control"
                   name="title"
+                  id="title"
                   minlength="4"
                   placeholder="Minimum 04 charaters"
                   aria-required="true"
@@ -441,6 +444,7 @@
                   type="text"
                   class="form-control"
                   name="description"
+                  id="description"
                   minlength="10"
                   placeholder="Minimum 10 characters"
                   aria-required="true"
@@ -453,16 +457,20 @@
                   type="date"
                   class="form-control"
                   name="date"
+                  id="date"
                   aria-required="true"
                   required
                 />
               </div>
               <div class="mb-4">
-                <label for="media" class="form-label fs-4">Image Link</label>
+                <label for="listing-media" class="form-label fs-4"
+                  >Image Link</label
+                >
                 <input
                   type="url"
                   class="form-control"
                   name="media"
+                  id="listing-media"
                   placeholder="Url to your image"
                   aria-required="true"
                   required
@@ -474,6 +482,7 @@
                   type="text"
                   class="form-control"
                   name="tags"
+                  id="tags"
                   placeholder="Separate tags by commas "
                   aria-required="true"
                 />
