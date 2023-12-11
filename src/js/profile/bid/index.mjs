@@ -1,5 +1,5 @@
 import { userToken } from "../../auth_API/token.mjs";
-import { message } from "../../data/message.mjs";
+import { message, loader } from "../../data/message.mjs";
 
 export async function postBid(url, data) {
   try {
@@ -22,7 +22,6 @@ export async function postBid(url, data) {
       throw new Error("Could not bid on this item");
     }
   } catch (error) {
-    const loader = document.querySelector(".mediaNote");
     loader.classList.add("text-secondary", "bg-light");
     loader.innerHTML = message("error", error);
   }
