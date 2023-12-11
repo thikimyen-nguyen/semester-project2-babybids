@@ -4,6 +4,7 @@ import { currentProfileURL, getCurrentProfile } from "./get.mjs";
 import { message, loader } from "../../data/message.mjs";
 export const loginNav = document.querySelector("#loginNav");
 export const logoutNav = document.querySelector("#logoutNav");
+export const profileNav = document.querySelector("#profileNav");
 export async function showUserProfile() {
   try {
     const userProfileContainer = document.querySelector("#userProfile");
@@ -21,6 +22,7 @@ export async function showUserProfile() {
       userProfileContainer.classList.remove("d-none");
       loginNav.classList.add("d-none");
       logoutNav.classList.remove("d-none");
+      profileNav.classList.remove("d-none");
       showProfileHTML(user);
     }
   } catch (error) {

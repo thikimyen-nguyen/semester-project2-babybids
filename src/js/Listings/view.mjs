@@ -3,8 +3,6 @@ import { allListingsURL } from "../auth_API/api.mjs";
 import { showListingsCards } from "../ui/listings.mjs";
 import { carouselListing } from "../ui/filteredListings.mjs";
 import { message, loader } from "../data/message.mjs";
-import { getSearchResults } from "../data/search.mjs";
-
 
 // show all listings on homepage
 export async function showListings() {
@@ -14,19 +12,14 @@ export async function showListings() {
     localStorage.setItem("currentListings", JSON.stringify(listings));
     showListingsCards(listings);
     carouselListing(listings);
-   
   } catch (error) {
     const pageContent = document.querySelector(".content");
     if (pageContent) {
-      pageContent.classList.add("d-none")
+      pageContent.classList.add("d-none");
     }
     loader.classList.add("bg-light");
     loader.innerHTML = message("error", error);
   }
 }
 
-
 showListings();
-// search function
-getSearchResults()
-

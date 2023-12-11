@@ -2,7 +2,7 @@ import { showListingsCards } from "../ui/listings.mjs";
 import * as login from "../profile/login/index.mjs";
 import * as register from "../profile/register/index.mjs";
 import { userToken } from "../auth_API/token.mjs";
-import { loginNav, logoutNav } from "../profile/user/view.mjs";
+import { loginNav, logoutNav, profileNav } from "../profile/user/view.mjs";
 import { logout } from "../profile/logout/index.mjs";
 import { scrollToListings } from "./scrollToListing.mjs";
 scrollToListings();
@@ -72,6 +72,7 @@ showResults();
 if (userToken) {
   loginNav.classList.add("d-none");
   logoutNav.classList.remove("d-none");
+  profileNav.classList.remove("d-none");
 }
 
 // logout
