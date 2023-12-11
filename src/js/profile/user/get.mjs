@@ -17,12 +17,8 @@ const getOption = {
 export async function getCurrentProfile(url) {
   const response = await fetch(url, getOption);
   const user = await response.json();
-  // const {avatar, credits} = user;
 
-  // localStorage.setItem("avatar", avatar);
-  // localStorage.setItem("credits", credits);
   if (response.ok) {
-    console.log(user);
     return user;
   } else {
     throw new Error("Could not get current user detail!");

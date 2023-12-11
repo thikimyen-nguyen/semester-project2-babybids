@@ -17,7 +17,7 @@ export async function showUserProfile() {
         credits: credits,
         avatar: avatar,
       };
-      console.log(currentUser);
+
       userProfileContainer.classList.remove("d-none");
       loginNav.classList.add("d-none");
       logoutNav.classList.remove("d-none");

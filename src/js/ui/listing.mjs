@@ -164,9 +164,14 @@ export function singleListingCard(listing) {
   listingContainer.append(card, descriptionContainer, historyContainer);
 
   // if logged in user
+  const expiredListing = updateCountdown(endsAt);
+
   if (userToken) {
     historyContainer.classList.remove("d-none");
     bidNote.classList.add("d-none");
     bidBtn.disabled = false;
+  }
+  if (userToken && expiredListing === "Expired!") {
+    bidBtn.disabled = true;
   }
 }

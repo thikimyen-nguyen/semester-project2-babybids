@@ -10,7 +10,7 @@ export async function showSingleListing(url) {
   try {
     const listing = await getOneListing(url);
     localStorage.setItem("currentListing", JSON.stringify(listing));
-    console.log(listing);
+
     singleListingCard(listing);
   } catch (error) {
     const pageContent = document.querySelector(".content");

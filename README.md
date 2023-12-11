@@ -73,6 +73,6 @@ Before you start, ensure you have the following installed:
 - <a href="https://www.freepik.com/free-photo/childrens-bed-nursery-cot-velvet-childrens-room_17245667.htm#query=baby%20furniture&position=3&from_view=search&track=ais&uuid=f3f54c05-468e-4e46-81f9-261680ff13fb">Image by wirestock</a> on Freepik
 - Image by <a href="https://www.freepik.com/free-photo/carrycot-with-toys-blankets_1441028.htm#query=baby%20furniture&position=9&from_view=search&track=ais&uuid=f3f54c05-468e-4e46-81f9-261680ff13fb">Freepik</a>
 - <a href="https://www.freepik.com/free-photo/white-crib-minimal-nursery-room_18835617.htm#query=baby%20furniture&position=12&from_view=search&track=ais&uuid=f3f54c05-468e-4e46-81f9-261680ff13fb">Image by rawpixel.com</a> on Freepik
-- 
+- <a href="https://www.freepik.com/free-psd/buggy-mockup_2100694.htm#page=2&query=baby%20stroller&position=14&from_view=search&track=ais&uuid=0f383fa2-f5e4-4c76-8865-cbd6aff0721d">Image by zlatko_plamenov</a> on Freepik
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9bd35427-15e4-43a9-a0ae-f3826c9e2530/deploy-status)](https://app.netlify.com/sites/babeebids/deploys)

@@ -12,6 +12,9 @@ createListingForm.addEventListener("submit", function createNewListing(event) {
     // Convert the tags and image link value to an array
     const tags = formData.get("tags");
     const tagsArray = tags.split(",").map((tag) => tag.trim());
+    // if (!tagsArray.includes("babee")) {
+    //   tagsArray.push("babee");
+    // }
     const media = formData.get("media");
     const mediaArray = media.split(",").map((image) => image.trim());
     // End Date
