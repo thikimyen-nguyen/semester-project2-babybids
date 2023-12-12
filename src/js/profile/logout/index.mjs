@@ -6,7 +6,7 @@ export function logout() {
       const remove = (key) => localStorage.removeItem(key);
       remove("accessToken");
       alert("You are logged out successfully!");
-      window.location.reload();
+      window.location.href = "../index.html";
     } catch {
       return alert("There was a problem logging out");
     }
