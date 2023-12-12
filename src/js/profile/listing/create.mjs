@@ -1,4 +1,6 @@
 import { userToken } from "../../auth_API/token.mjs";
+import { alertModal } from "../../ui/alert.mjs";
+
 // post data to register Account
 export async function create(url, data) {
   const postOption = {
@@ -14,8 +16,7 @@ export async function create(url, data) {
   const json = await response.json();
   console.log(json);
   if (response.ok) {
-    alert("Your listing was created successfully!");
-    window.location.href = "../profile.html";
+    alertModal("Success!", "Your listing was created successfully!");
   } else {
     throw new Error("Could not create listing.Please try again!");
   }

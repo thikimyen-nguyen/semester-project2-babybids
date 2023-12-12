@@ -27,6 +27,6 @@ export async function showUserProfile() {
     }
   } catch (error) {
     loader.classList.add("text-secondary", "bg-light");
-    loader.innerHTML = message("error", error);
+    loader.innerHTML = message(error);
   }
 }

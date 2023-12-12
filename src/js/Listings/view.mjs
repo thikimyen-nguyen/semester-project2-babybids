@@ -18,7 +18,7 @@ export async function showListings() {
       pageContent.classList.add("d-none");
     }
     loader.classList.add("bg-light");
-    loader.innerHTML = message("error", error);
+    loader.innerHTML = message(error);
   }
 }
 

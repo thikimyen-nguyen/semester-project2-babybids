@@ -1,4 +1,5 @@
 import { message } from "../../data/message.mjs";
+import { alertModal } from "../../ui/alert.mjs";
 
 // post data to register Account
 async function register(url, data) {
@@ -15,7 +16,10 @@ async function register(url, data) {
     const json = await response.json();
     console.log(json);
     if (response.ok) {
-      alert("Your account was registered successfully! You can now Log In");
+      alertModal(
+        "Success!",
+        "Your account was registered successfully! You can now Log In",
+      );
     } else {
       throw new Error(
         "Could not create account. It may be existed. You can try login or create new account",
@@ -26,7 +30,7 @@ async function register(url, data) {
   } catch (error) {
     const loader = document.querySelector(".modalLoader");
     loader.classList.add("text-secondary", "bg-light");
-    loader.innerHTML = message("error", error);
+    loader.innerHTML = message(error);
   }
 }
 

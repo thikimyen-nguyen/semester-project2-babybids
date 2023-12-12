@@ -27,7 +27,7 @@ async function login(url, data) {
   } catch (error) {
     const loader = document.querySelector(".modalLoader");
     loader.classList.add("text-secondary", "bg-light");
-    loader.innerHTML = message("error", error);
+    loader.innerHTML = message(error);
   }
 }
 

@@ -15,7 +15,7 @@ export async function showSingleListing(url) {
     const pageContent = document.querySelector(".content");
     pageContent.classList.add("d-none");
     loader.classList.add("bg-light");
-    loader.innerHTML = message("error", error);
+    loader.innerHTML = message(error);
   }
 }
 showSingleListing(singleListingURL);

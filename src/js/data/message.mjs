@@ -1,5 +1,5 @@
 const loader = document.querySelector(".loader");
-function message(type = "success", message = "") {
-  return `<div class ="${type}">${message}</div>`;
+function message(error) {
+  return `<div>${error}</div>`;
 }
 export { loader, message };

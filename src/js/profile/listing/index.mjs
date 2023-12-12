@@ -30,6 +30,6 @@ createListingForm.addEventListener("submit", function createNewListing(event) {
   } catch (error) {
     const loader = document.querySelector(".createListingNote");
     loader.classList.add("text-secondary", "bg-light");
-    loader.innerHTML = message("error", error);
+    loader.innerHTML = message(error);
   }
 });

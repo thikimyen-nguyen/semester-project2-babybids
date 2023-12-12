@@ -1,6 +1,8 @@
 import { userToken } from "../../auth_API/token.mjs";
 import { profileURL } from "../../auth_API/api.mjs";
 import { message } from "../../data/message.mjs";
+import { alertModal } from "../../ui/alert.mjs";
+
 export async function postAvatar(url, data) {
   try {
     const putDataOption = {
@@ -15,8 +17,8 @@ export async function postAvatar(url, data) {
     const response = await fetch(url, putDataOption);
     const json = await response.json();
     if (response.ok) {
-      alert("Your avatar is updated!");
-      window.location.reload();
+      alertModal("Success!", "Your avatar is updated!");
+
       return json;
     } else {
       throw new Error("Could not update avatar!");
@@ -24,7 +26,7 @@ export async function postAvatar(url, data) {
   } catch (error) {
     const loader = document.querySelector(".mediaNote");
     loader.classList.add("text-secondary", "bg-light");
-    loader.innerHTML = message("error", error);
+    loader.innerHTML = message(error);
   }
 }
 

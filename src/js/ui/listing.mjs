@@ -10,6 +10,7 @@ import { createTable } from "./table.mjs";
 import { userToken } from "../auth_API/token.mjs";
 import { postBid } from "../profile/bid/index.mjs";
 import { bidURL } from "../auth_API/api.mjs";
+import { alertModal } from "../ui/alert.mjs";
 // single listing detail HTML
 
 export function singleListingCard(listing) {
@@ -97,7 +98,10 @@ export function singleListingCard(listing) {
       console.log(bidValue);
       postBid(bidURL, bidValue);
     } else {
-      alert("Your bid must be greater than current highest bid");
+      alertModal(
+        "Careful!",
+        "Your bid must be greater than current highest bid",
+      );
     }
   });
 
