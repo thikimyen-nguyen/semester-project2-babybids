@@ -1,4 +1,5 @@
 import { message } from "../../data/message.mjs";
+import { alertModal } from "../../ui/alert.mjs";
 
 async function login(url, data) {
   try {
@@ -19,7 +20,7 @@ async function login(url, data) {
     console.log(json);
 
     if (response.ok) {
-      window.location.reload();
+      alertModal("Success!", "You are logged In!");
     } else {
       throw new Error("Please log in again with correct email or password");
     }

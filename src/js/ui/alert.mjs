@@ -8,12 +8,9 @@ export function alertModal(type = "Success!", message = "") {
   alertMessage.innerHTML = message;
   alertModal.show();
 
-  // Hide the modal after 2000 milliseconds
   setTimeout(() => {
-    // Hide the modal
     alertModal.hide();
 
-    // Reload the page
     window.location.reload();
   }, 2000);
 }
