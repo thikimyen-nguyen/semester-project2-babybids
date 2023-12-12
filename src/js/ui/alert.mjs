@@ -1,5 +1,4 @@
-import * as bootstrap from "bootstrap";
-
+/* global bootstrap */
 export function alertModal(type = "Success!", message = "") {
   const alertType = document.querySelector("#alertType");
   const alertMessage = document.querySelector("#alertMessage");
