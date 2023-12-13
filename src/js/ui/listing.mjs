@@ -11,6 +11,7 @@ import { userToken } from "../auth_API/token.mjs";
 import { postBid } from "../profile/bid/index.mjs";
 import { bidURL } from "../auth_API/api.mjs";
 import { alertModal } from "../ui/alert.mjs";
+
 // single listing detail HTML
 
 export function singleListingCard(listing) {

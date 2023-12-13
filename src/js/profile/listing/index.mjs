@@ -12,9 +12,9 @@ createListingForm.addEventListener("submit", function createNewListing(event) {
     // Convert the tags and image link value to an array
     const tags = formData.get("tags");
     const tagsArray = tags.split(",").map((tag) => tag.trim());
-    // if (!tagsArray.includes("babee")) {
-    //   tagsArray.push("babee");
-    // }
+    if (!tagsArray.includes("babee")) {
+      tagsArray.push("babee");
+    }
     const media = formData.get("media");
     const mediaArray = media.split(",").map((image) => image.trim());
     // End Date
@@ -25,7 +25,6 @@ createListingForm.addEventListener("submit", function createNewListing(event) {
     listing.tags = tagsArray;
     listing.media = mediaArray;
     listing.endsAt = formattedDate;
-    console.log(listing);
     create(createListingURL, listing);
   } catch (error) {
     const loader = document.querySelector(".createListingNote");

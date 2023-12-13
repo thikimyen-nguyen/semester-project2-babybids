@@ -5,6 +5,13 @@ import { carouselListing } from "../ui/filteredListings.mjs";
 import { message, loader } from "../data/message.mjs";
 
 // show all listings on homepage
+/**
+ *  Asynchronously fetches and displays a list of listings from the specified URL.
+ *
+ * @throws {Error} Throws an error if the request to fetch the list of listings is not successful.
+ *
+ * @export
+ */
 export async function showListings() {
   loader.innerHTML = "";
   try {

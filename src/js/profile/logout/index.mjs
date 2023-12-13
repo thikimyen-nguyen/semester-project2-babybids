@@ -1,11 +1,14 @@
 import { alertModal } from "../../ui/alert.mjs";
 
 const logoutBtn = document.querySelector("#logoutNav");
+/**
+ * Sets up an event listener for the logout button click to handle user logout.
+ * @export
+ */
 export function logout() {
   logoutBtn.addEventListener("click", function () {
     try {
       if (window.location.href.endsWith("/profile.html")) {
-        console.log("Redirecting to index.html");
         window.location.href = "../index.html";
       }
 

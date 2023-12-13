@@ -3,7 +3,12 @@ import { getOneListing } from "../listing/get.mjs";
 import { message, loader } from "../data/message.mjs";
 import { singleListingCard } from "../ui/listing.mjs";
 
-console.log(singleListingURL);
+/**
+ * Asynchronously fetches and displays details for a single listing from the specified URL.
+ *
+ * @export
+ * @param {string} url - The URL from which to fetch the listing details.
+ */
 export async function showSingleListing(url) {
   loader.innerHTML = "";
   try {

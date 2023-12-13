@@ -1,5 +1,13 @@
 // countdown time for deadline
 
+/**
+ * Calculates the time remaining until a specified date and returns a formatted countdown string.
+ *
+ *
+ * @export
+ * @param {string | number | Date} date -  The deadline date for the countdown.
+ * @return {string} A formatted countdown string indicating the time remaining.
+ */
 export function updateCountdown(date) {
   const deadlineDate = new Date(date);
   const now = new Date();

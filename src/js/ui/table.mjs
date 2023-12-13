@@ -1,5 +1,12 @@
-// table html
- export function createTable(tableData) {
+// table html to show all bids for a listing
+/**
+  * Creates an HTML table element based on the provided table data.
+  * @export
+  * @param {Object[]} tableData - An array of objects representing the data to be displayed in the table.
+  * @returns {HTMLTableElement} table - The created HTML table element.
+ 
+  */
+export function createTable(tableData) {
   // table header
   const table = document.createElement("table");
   table.classList.add("table", "table-striped");
@@ -24,14 +31,13 @@
   // table body
   const tbody = document.createElement("tbody");
 
-  
   tableData.forEach(function (rowData, index) {
     const row = document.createElement("tr");
 
     // Add the first column with the number order
-    const orderCell = document.createElement('th');
-    orderCell.scope = 'row';
-    orderCell.textContent = index + 1; 
+    const orderCell = document.createElement("th");
+    orderCell.scope = "row";
+    orderCell.textContent = index + 1;
     row.append(orderCell);
 
     // Loop through array and create cells
@@ -45,9 +51,7 @@
     tbody.append(row);
   });
 
- 
   table.append(tbody);
 
-  return table
+  return table;
 }
-

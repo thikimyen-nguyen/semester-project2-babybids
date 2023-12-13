@@ -1,6 +1,14 @@
 //  Check if the deadline is less than 3 days, filter listings
+/**
+ *
+ *
+ * @export
+ * @param  {Array} listings - The array of listings to be filtered.
+ * @return {Array} An array of filtered listings.
+ */
 export function filterListings(listings) {
   const now = new Date();
+
   const filteredListings = listings.filter((listing) => {
     // exclude listing with empty media, then filter with deadline < 3 days
     const listingMedia = listing.media;

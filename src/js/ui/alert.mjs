@@ -1,4 +1,5 @@
 /* global bootstrap */
+// Create a specific alert message
 export function alertModal(type = "Success!", message = "") {
   const alertType = document.querySelector("#alertType");
   const alertMessage = document.querySelector("#alertMessage");

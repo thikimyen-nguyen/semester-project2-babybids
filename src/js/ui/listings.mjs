@@ -1,8 +1,9 @@
 import { updateCountdown } from "../data/countdown.mjs";
+
 // All active Listings Card HTML
 export function showListingsCards(listings) {
   listings.forEach((listing) => {
-    const { title, description, endsAt, media, id} = listing;
+    const { title, description, endsAt, media, id } = listing;
     // Create card HTML
     const listingsContainer = document.querySelector("#listings-container");
     const cardContainer = document.createElement("div");

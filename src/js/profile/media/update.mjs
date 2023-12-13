@@ -3,6 +3,15 @@ import { profileURL } from "../../auth_API/api.mjs";
 import { message } from "../../data/message.mjs";
 import { alertModal } from "../../ui/alert.mjs";
 
+/**
+ * Asynchronously updates the user's avatar by sending a PUT request to the specified URL with the provided data.
+ * @export
+ * @param {string} url - The URL to which the PUT request for updating the avatar will be sent.
+ * @param {Object} data - An object of media data
+ * @returns {Object} An object of profile user with new media updated if the update is successful.
+ * @throws {Error} Throws an error if the avatar update request is not successful.
+
+ */
 export async function postAvatar(url, data) {
   try {
     const putDataOption = {
@@ -35,6 +44,11 @@ const avatarInput = document.querySelector("#media");
 const currentUser = localStorage.getItem("currentUser");
 const updateMediaURL = profileURL + `/${currentUser}/media`;
 
+/**
+ * Sets up an event listener for the media form submission to update the user's avatar.
+ *
+ * @export
+ */
 export function updateMedia() {
   mediaForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -46,5 +60,3 @@ export function updateMedia() {
     postAvatar(updateMediaURL, newAvatar);
   });
 }
-
-// get new update user profile to show new media

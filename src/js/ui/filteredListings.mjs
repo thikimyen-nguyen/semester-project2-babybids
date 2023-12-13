@@ -1,10 +1,10 @@
 import { filterListings } from "../data/filteredListings.mjs";
 import { updateCountdown } from "../data/countdown.mjs";
-// listing card in carousel HTML
+// listing cards in carousel HTML
 export function carouselListing(listings) {
   // filter listings
   const filteredListings = filterListings(listings);
- 
+
   // Create HTML
   filteredListings.forEach((listing, index) => {
     const { title, endsAt, media, id } = listing;

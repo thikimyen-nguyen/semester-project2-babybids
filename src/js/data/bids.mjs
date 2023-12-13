@@ -1,8 +1,13 @@
-//  Get the maw amount from the bids array
+/**
+ * Get the maximum amount from the bids array
+ *
+ * @export
+ * @param {array} This is an array of bid amounts on a listing
+ * @return {number} maxAmount
+ */
 export function getMaxAmount(array) {
   // Check if the array is empty
   if (array.length === 0) {
-    console.error("Array is empty");
     return 0;
   }
 

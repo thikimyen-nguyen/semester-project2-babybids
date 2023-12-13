@@ -6,7 +6,8 @@ import {
 
 import { showListingsCards } from "../../ui/listings.mjs";
 import { loader, message } from "../../data/message.mjs";
-const currentUserListingsURL = profileURL + `/${currentUserName}/listings`;
+const currentUserListingsURL =
+  profileURL + `/${currentUserName}/listings?_tag=babee`;
 const profileListings = document.querySelector(".profileListings");
 
 export async function showUserListings() {

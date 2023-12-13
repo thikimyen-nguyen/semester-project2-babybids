@@ -1,4 +1,11 @@
-
+/**
+ *
+ *
+ * @export
+ * @param {HTMLElement} element - The HTML element to which attributes will be set.
+ * @param {Object} attributes - An object containing key-value pairs where keys represent attribute names
+ * and values represent attribute values.
+ */
 export function setAttributes(element, attributes) {
   for (const key in attributes) {
     if (Object.prototype.hasOwnProperty.call(attributes, key)) {

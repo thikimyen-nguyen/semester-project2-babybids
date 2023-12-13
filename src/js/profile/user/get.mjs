@@ -14,6 +14,13 @@ const getOption = {
   },
 };
 //  get current user profile
+/**
+ *  Asynchronously retrieves the current user's profile information by sending a GET request to the specified URL.
+ * @export
+ * @param {string} url - The URL from which to retrieve the current user's profile information.
+ * @returns {Object} An object of the current user's profile details.
+ * @throws {Error} Throws an error if the request to get the current user's profile is not successful.
+ */
 export async function getCurrentProfile(url) {
   const response = await fetch(url, getOption);
   const user = await response.json();
@@ -26,6 +33,14 @@ export async function getCurrentProfile(url) {
 }
 
 //  get current user listings
+/**
+ * Asynchronously retrieves the current user's listings by sending a GET request to the specified URL.
+ * @export
+ * @param {string} url - The URL from which to retrieve the current user's listings.
+ * @returns {Array} An array of the current user's listings.
+ * @throws {Error} Throws an error if the request to get the current user's listings is not successful.
+
+ */
 export async function getCurrentUserListings(url) {
   const response = await fetch(url, getOption);
   const listings = await response.json();
