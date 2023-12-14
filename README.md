@@ -3,7 +3,6 @@
 This is a Semester Project 2 in my second year to take the skills learned over the past three semesters and create an auction website.
 
 
-
 ## Table of Contents
 
 - [Description](#description)
@@ -11,6 +10,7 @@ This is a Semester Project 2 in my second year to take the skills learned over t
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
+  - [Running the Project Locally](#running-the-project-locally)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -36,9 +36,9 @@ This projects has to follow restrictions of approved tech stacks and satisfy bel
 ## Built with:
 
 - HTML
-- Tailwind (version >3.0.0)
+- Bootstrap (5.2.0)
+- SCSS
 - JavaScript
-
 - Hosting services: GitHub Pages
 
 - Design applications: Figma
@@ -52,13 +52,33 @@ This projects has to follow restrictions of approved tech stacks and satisfy bel
 Before you start, ensure you have the following installed:
 
 - Web browser (e.g., Chrome, Firefox)
+- [Node.js](https://nodejs.org/) (for npm)
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the repository to your local machine and install the dependencies.
 
    ```bash
    git clone https://github.com/thikimyen-nguyen/semester-project2-babybids
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd semester-project2-babybids
+
+3. Install the project dependencies:
+   ```bash
+    npm install
+    
+### Running the Project Locally
+Start the development server to run the project locally.
+   ```bash
+    npm run watch
+
+## Usage
+Explore the auction functionality, check out the responsive design, and interact with the user interface.
+
+
 
 #### Image Resource
 - <a href="https://www.freepik.com/free-photo/white-children-room-with-copy-space_14061170.htm#page=4&query=baby%20room&position=20&from_view=search&track=ais&uuid=5d529cc9-707a-45c3-9d2f-f6388dd31bdd">Image by wuttichai1983</a> on Freepik
