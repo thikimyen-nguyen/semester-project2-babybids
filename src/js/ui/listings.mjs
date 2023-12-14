@@ -34,10 +34,15 @@ export function showListingsCards(listings) {
     //  listing body
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
-    const cardTitle = document.createElement("h5");
+    const cardTitle = document.createElement("p");
     const cardDescription = document.createElement("p");
     cardBody.append(cardTitle, cardDescription);
-    cardTitle.classList.add("card-title", "text-secondary", "text-capitalize");
+    cardTitle.classList.add(
+      "card-title",
+      "text-secondary",
+      "text-capitalize",
+      "fs-5",
+    );
     cardTitle.innerText = title;
     cardDescription.classList.add("card-text");
     cardDescription.innerText = description;
