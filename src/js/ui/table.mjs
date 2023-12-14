@@ -2,7 +2,7 @@
 /**
   * Creates an HTML table element based on the provided table data.
   * @export
-  * @param {Object[]} tableData - An array of objects representing the data to be displayed in the table.
+  * @param {Array} tableData - An array of objects representing the data to be displayed in the table.
   * @returns {HTMLTableElement} table - The created HTML table element.
  
   */
