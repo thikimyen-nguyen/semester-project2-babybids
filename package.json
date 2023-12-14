@@ -1,6 +1,6 @@
 {
   "name": "semester-project2-babybids",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "An auction website for baby and maternity products",
   "scripts": {
     "build": "sass src/scss:dist/css",
