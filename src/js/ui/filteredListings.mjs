@@ -31,7 +31,7 @@ export function carouselListing(listings) {
     //  listing body
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body", "bg-light", "p-0");
-    const cardTitle = document.createElement("h5");
+    const cardTitle = document.createElement("p");
 
     cardTitle.classList.add(
       "card-title",
@@ -39,6 +39,7 @@ export function carouselListing(listings) {
       "text-capitalize",
       "ps-2",
       "pt-2",
+      "fs-5",
     );
     cardTitle.innerText = title;
     const endDate = document.createElement("p");
