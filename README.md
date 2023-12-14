@@ -12,6 +12,7 @@ This is a Semester Project 2 in my second year to take the skills learned over t
   - [Installation](#installation)
   - [Running the Project Locally](#running-the-project-locally)
 - [Usage](#usage)
+- [Testing](#testing)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -39,11 +40,12 @@ This projects has to follow restrictions of approved tech stacks and satisfy bel
 - Bootstrap (5.2.0)
 - SCSS
 - JavaScript
-- Hosting services: GitHub Pages
+- Hosting services: Netlify
 
 - Design applications: Figma
 
 - Planning applications: GitHub Projects
+- Noroff API
 
 ## Getting Started
 
@@ -69,15 +71,38 @@ Before you start, ensure you have the following installed:
 3. Install the project dependencies:
    ```bash
     npm install
-    
+
 ### Running the Project Locally
-Start the development server to run the project locally.
+
+1. Start the development server to run the project locally.
    ```bash
     npm run watch
+
 
 ## Usage
 Explore the auction functionality, check out the responsive design, and interact with the user interface.
 
+
+## Testing
+
+Testing is an essential part of maintaining code quality and ensuring that the project functions as expected. While Semester Project 2: BabeeBids does not have a dedicated test suite at the moment, we encourage contributors to add tests when making significant changes or additions to the codebase.
+
+### How to Contribute Tests
+
+1. **Fork the Repository**: Start by forking the repository to your GitHub account.
+
+2. **Create a Branch**: Create a new branch for your changes.
+
+   ```bash
+   git checkout -b feature/add-tests
+
+3. Write Tests: Develop tests for the new functionality or changes you're introducing. Follow best practices for writing effective tests.
+
+4. Run Tests Locally: Before creating a pull request, make sure to run the tests locally to catch any issues.
+
+   ```bash
+   npm test
+5. Submit a Pull Request: Once the tests are written and passing locally, submit a pull request.
 
 
 #### Image Resource
