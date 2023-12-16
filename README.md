@@ -13,8 +13,7 @@ This is a Semester Project 2 in my second year to take the skills learned over t
   - [Running the Project Locally](#running-the-project-locally)
 - [Usage](#usage)
 - [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Description
 

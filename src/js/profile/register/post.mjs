@@ -37,7 +37,7 @@ async function register(url, data) {
 
     return json;
   } catch (error) {
-    const loader = document.querySelector(".modalLoader");
+    const loader = document.querySelector(".registerModalLoader");
     loader.classList.add("text-secondary", "bg-light");
     loader.innerHTML = message(error);
   }
