@@ -8,9 +8,10 @@ const logoutBtn = document.querySelector("#logoutNav");
 export function logout() {
   logoutBtn.addEventListener("click", function () {
     try {
-      if (window.location.href.endsWith("/profile.html")) {
-        window.location.href = "../index.html";
-      }
+      // if (window.location.href.endsWith("/profile.html")) {
+      //   window.location.href = "../index.html";
+      // }
+      window.location.href = "../index.html";
 
       const remove = (key) => localStorage.removeItem(key);
       remove("accessToken");
