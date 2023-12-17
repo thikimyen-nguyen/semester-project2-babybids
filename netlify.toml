@@ -1,8 +1,3 @@
 [build]
   command = "npm run build"
  
- [[plugins]]
-  package = "netlify-plugin-purifycss"
-  [plugins.inputs]
-    paths = ["./dist/**/*.html", "./dist/**/*.js"]
-    styleExtensions = ["css"]
