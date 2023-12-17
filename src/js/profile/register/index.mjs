@@ -33,7 +33,6 @@ export function registerAccount() {
         email: email.value,
         password: password.value,
       };
-      console.log(userRegisterInfo);
       register(registerURL, userRegisterInfo);
     }
   });

@@ -96,7 +96,7 @@ export function singleListingCard(listing) {
       const bidValue = {
         amount: parseFloat(bidInput.value) || 0,
       };
-      console.log(bidValue);
+
       postBid(bidURL, bidValue);
     } else {
       alertModal(

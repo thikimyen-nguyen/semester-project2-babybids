@@ -6,8 +6,9 @@ const logoutBtn = document.querySelector("#logoutNav");
  * @export
  */
 export function logout() {
-  logoutBtn.addEventListener("click", function () {
+  logoutBtn.addEventListener("click", function (event) {
     try {
+      event.preventDefault();
       // if (window.location.href.endsWith("/profile.html")) {
       //   window.location.href = "../index.html";
       // }

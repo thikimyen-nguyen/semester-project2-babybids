@@ -23,7 +23,6 @@ async function register(url, data) {
 
     const response = await fetch(url, postOption);
     const json = await response.json();
-    console.log(json);
     if (response.ok) {
       alertModal(
         "Success!",
