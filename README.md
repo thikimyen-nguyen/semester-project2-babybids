@@ -1,4 +1,5 @@
 # babee.bids - An auction website for baby and maternity products
+![image](https://github.com/thikimyen-nguyen/semester-project2-babybids/blob/main/babeebids.webp)
 
 This is a Semester Project 2 in my second year to take the skills learned over the past three semesters and create an auction website.
 
